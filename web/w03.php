@@ -1,8 +1,10 @@
+<?php
 $name = htmlspecialchars($_POST["name"]);
 $email = htmlspecialchars($_POST["email"]);
 $major = htmlspecialchars($_POST["major"]);
 $comments = htmlspecialchars($_POST["comments"]);
 $places = $_POST["places"];
+?>
 
 <!DOCTYPE html>
 <html>
