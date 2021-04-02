@@ -4,7 +4,7 @@ $db = get_db();
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="./w05.css">
+    <!-- <link rel="stylesheet" href="./w05.css"> -->
 </head>
 <body>
 
@@ -13,7 +13,11 @@ $db = get_db();
     </div>
 
     <div class="section">
-        
+        <?php foreach ($db->query('SELECT firstname, password FROM notepublic.user') as $row)
+        {
+        echo 'user: ' . $row['firstname'];
+        echo '<br/>';
+        }?>
     </div>
 
 
