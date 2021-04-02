@@ -1,5 +1,6 @@
 <?php require "./dbConnect.php";
 $db = get_db();
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,9 +14,11 @@ $db = get_db();
     </div>
 
     <div class="section">
+        
         <?php 
             $user = $db->prepare("SELECT firstname, lastname FROM public.user");
             $user->execute();
+            
 
             while ($row = $user->fetch(PDO::FETCH_ASSOC))
             {
@@ -26,6 +29,13 @@ $db = get_db();
                 echo "<p class='user'>$fName $lName<p>";
             }
         ?>
+        <form action="" method="" id="login">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" value="anne@anne.com"><br><br>
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" value="pass">
+        </form>
+
     </div>
     
 
