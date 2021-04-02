@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -123,6 +126,11 @@
                 >
             </div>
         </div>
+        <?php
+    // Set session variables
+    $cartBOP = $_SESSION["cartBOP"];
+    $_SESSION["cartBOP"] = $cartBOP;
+    ?>
 
     </div>
     <input type="submit" value="Add to Cart">
