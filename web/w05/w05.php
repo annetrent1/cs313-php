@@ -9,7 +9,7 @@ $db = get_db();
 <body>
 
     <div class="title">
-        <h1>Notecards</h1>
+        <h1>Notecards <?php echo "Hello" ?></h1>
     </div>
 
     <div class="section">
