@@ -24,9 +24,11 @@
         </div>
     </div>
 
-    <p><?php
-        echo "hello"
-    ?></p>
+    <?php
+    $t=time();
+    echo($t . "<br>");
+    echo(date("Y-m-d",$t));
+    ?>
 
 </body>
 </html>
