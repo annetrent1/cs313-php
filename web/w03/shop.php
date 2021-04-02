@@ -130,6 +130,19 @@ session_start();
     // Set session variables
     $cartBOP = $_SESSION["cartBOP"];
     $_SESSION["cartBOP"] = $cartBOP;
+    $cartMonstera = $_SESSION["cartMonstera"];
+    $_SESSION["cartMonstera"] = $cartMonstera;
+
+    $cartPothos = $_SESSION["cartPothos"];
+    $_SESSION["cartPothos"] = $cartPothos;
+    
+    $cartFiddle = $_SESSION["cartFiddle"];
+    $_SESSION["cartFiddle"] = $cartFiddle;
+    
+    $cartRubber = $_SESSION["cartRubber"];
+    $_SESSION["cartRubber"] = $cartRubber;
+    $cartSnake = $_SESSION["cartSnake"];
+    $_SESSION["cartSnake"] = $cartSnake;
     ?>
 
     </div>
