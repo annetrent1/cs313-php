@@ -3,6 +3,29 @@ session_start();
 require "./dbConnect.php";
 $db = get_db();
 
+if(isset($_POST['login'])){
+
+    $email = mysqli_real_escape_string($con,$_POST['email']);
+    $password = mysqli_real_escape_string($con,$_POST['password']);
+
+    if ($email != "" && $password != ""){
+
+        $sql_query = "select count(*) as cntUser from public.users where email='".$email."' and password='".$password."'";
+        $result = mysqli_query($con,$sql_query);
+        $row = mysqli_fetch_array($result);
+
+        $count = $row['cntUser'];
+
+        if($count > 0){
+            $_SESSION['email'] = $email;
+            header('Location: notecard.php');
+        }else{
+            echo "Invalid username and password";
+        }
+
+    }
+
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +35,7 @@ $db = get_db();
 <body>
 
     <div class="title">
-        <h1>Login <?php echo "Hello"?></h1>
+        <h1>Login</h1>
     </div>
 
     <div class="section">
@@ -31,12 +54,12 @@ $db = get_db();
                 echo "<p class='user'>$fName $lName<p>";
             }
         ?>
-        <form action="" method="" id="login">
+        <form action="" method="post" id="login">
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" value="anne@anne.com"><br><br>
         <label for="password">Password:</label>
         <input type="text" id="password" name="password" value="pass">
-        <input type="submit" value="login">
+        <input type="submit" value="Login" name="login">
         </form>
 
 
