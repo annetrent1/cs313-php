@@ -4,7 +4,7 @@ require "./dbConnect.php";
 $db = get_db();
 
 if(isset($_POST['login'])){
-
+    
     $email = mysqli_real_escape_string($con,$_POST['email']);
     $password = mysqli_real_escape_string($con,$_POST['password']);
 
@@ -59,7 +59,7 @@ if(isset($_POST['login'])){
         <input type="text" id="email" name="email" value="anne@anne.com"><br><br>
         <label for="password">Password:</label>
         <input type="text" id="password" name="password" value="pass">
-        <input type="submit" value="Login" name="login">
+        <input type="submit" value="Login" name="login" id="login">
         </form>
 
 
