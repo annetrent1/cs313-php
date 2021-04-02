@@ -37,12 +37,6 @@ $db = get_db();
         <input type="submit" value="login">
         </form>
 
-        <?php
-            $userid = db->prepare("SELECT userid from public.user WHERE email=$email AND password=$password;")
-            echo $userid;
-
-            
-        ?>
 
     </div>
     
