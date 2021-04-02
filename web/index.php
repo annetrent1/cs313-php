@@ -20,13 +20,12 @@
                 Alpaca Farm of your dreams". Talk about fate. I then took it upon myself to find oppurtunities where I
                 could go pet these fuzzy creature wherever I went.
             </p>
-            <img src="../images/alpaca.jpg" class="about-section">
+            <img src="./images/alpaca.jpg" class="about-section">
         </div>
+        <?php
+        echo "Today is " . date("l");
+        ?>
     </div>
-
-    <p><?php
-        echo "hello"
-    ?></p>
 
 </body>
 </html>
