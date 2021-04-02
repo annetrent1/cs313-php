@@ -18,7 +18,7 @@ $comments = htmlspecialchars($_GET["cartSnake"]);
         <div class="item">
             <p class="name">Bird of paradise</p>
             <div class="quantity_container">
-                <label for="bird_of_paradise">Quantity: <?php echo cartSnake?></label>
+                <label for="bird_of_paradise">Quantity: <?php echo $cartBOP?></label>
                 
             </div>
         </div>
@@ -26,7 +26,7 @@ $comments = htmlspecialchars($_GET["cartSnake"]);
         <div class="item">
             <p class="name">Monstera Deliciosa</p>
             <div class="quantity_container">
-                <label for="monstera">Quantity: </label>
+                <label for="monstera">Quantity: <?php echo $cartMonstera?></label>
                 
             </div>
         </div>
@@ -34,7 +34,7 @@ $comments = htmlspecialchars($_GET["cartSnake"]);
         <div class="item">
             <p class="name">Marble Queen Pothos</p>
             <div class="quantity_container">
-                <label for="marble_queen_pothos">Quantity: </label>
+                <label for="marble_queen_pothos">Quantity: <?php echo $cartPothos?></label>
             </div>
         </div>
 
@@ -42,7 +42,7 @@ $comments = htmlspecialchars($_GET["cartSnake"]);
             
             <p class="name">Fiddle Leaf Fig</p>
             <div class="quantity_container">
-                <label for="fiddle_leaf">Quantity: </label>
+                <label for="fiddle_leaf">Quantity: <?php echo $cacartFiddlertBOP?></label>
            
             </div>
         </div>
@@ -51,7 +51,7 @@ $comments = htmlspecialchars($_GET["cartSnake"]);
             
             <p class="name">Ficus Elastica Burgundy</p>
             <div class="quantity_container">
-                <label for="rubbber">Quantity: </label>
+                <label for="rubbber">Quantity: <?php echo $cartRubber?></label>
                
             </div>
         </div>
@@ -60,7 +60,7 @@ $comments = htmlspecialchars($_GET["cartSnake"]);
             
             <p class="name">Snake Plant</p>
             <div class="quantity_container">
-                <label for="snake">Quantity: </label>
+                <label for="snake">Quantity: <?php echo $cartSnake?></label>
                 
             </div>
         </div>
