@@ -14,22 +14,16 @@ $db = get_db();
 
     <div class="section">
         <?php 
-            foreach ($db->query('SELECT firstname, password FROM public.user') as $row)
-            {
-                echo 'user: ' . $row['firstname'];
-                echo '<br/>';
-            }
             $user = $db->prepare("SELECT firstname, lastname FROM public.user");
             $user->execute();
 
-            // Go through each result
             while ($row = $user->fetch(PDO::FETCH_ASSOC))
             {
                 
                 $fName = $row['firstname'];
                 $lName = $row['lastname'];
 
-                echo "<p>$fName $lName<p>";
+                echo "<p class='user'>$fName $lName<p>";
             }
         ?>
     </div>
