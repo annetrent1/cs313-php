@@ -34,6 +34,7 @@ session_start();
         <input type="text" id="email" name="email" value="anne@anne.com"><br><br>
         <label for="password">Password:</label>
         <input type="text" id="password" name="password" value="pass">
+        <input type="submit" value="Submit">
         </form>
 
     </div>
