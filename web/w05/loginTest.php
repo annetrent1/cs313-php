@@ -30,7 +30,7 @@ $db = get_db();
     <form method="post" action="" name="signin">
         <div class="form-element">
             <label>Username</label>
-            <input type="text" name="username" pattern="[a-zA-Z0-9]+" required />
+            <input type="text" name="username" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required />
         </div>
         <div class="form-element">
             <label>Password</label>
