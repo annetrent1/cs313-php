@@ -14,10 +14,9 @@ $db = get_db();
 
     <div class="section">
         <?php 
-            $users = $db->query('SELECT firstname, password FROM public.user')
-            foreach ($users)
+            foreach ($db->query('SELECT firstname, password FROM public.user') as $row)
             {
-                echo "<p class='user'> $row['firstname'] </p>";
+                echo 'user: ' . $row['firstname'];
                 echo '<br/>';
             }
         ?>
