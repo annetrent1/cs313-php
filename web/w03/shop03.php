@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<?php
+$name = htmlspecialchars($_GET["cartBOP"]);
+$email = htmlspecialchars($_GET["cartMonstera"]);
+$major = htmlspecialchars($_GET["cartPothos"]);
+$comments = htmlspecialchars($_GET["cartFiddle"]);
+$comments = htmlspecialchars($_GET["cartRubber"]);
+$comments = htmlspecialchars($_GET["cartSnake"]);
+?>
 <html>
     <head>
         <link rel="stylesheet" href="./shop03.css">
@@ -6,14 +14,11 @@
 <body> 
 
 <h1>Plant Shop</h1>
-<?php echo "hello" ?>
-
-
     <div class="items_container">
         <div class="item">
             <p class="name">Bird of paradise</p>
             <div class="quantity_container">
-                <label for="bird_of_paradise">Quantity: </label>
+                <label for="bird_of_paradise">Quantity: <?php echo cartSnake?></label>
                 
             </div>
         </div>
