@@ -2,14 +2,13 @@
 function get_db() {
 	try {
 		// Default Heroku Postgres configuration URL
-		$dbUrl = 'postgres://xypjmqpkzlscmu:24437885416e4c873ae74d4cd981752da2ee80926fb1c77adbb91f1cc08d9fb0@ec2-54-205-187-125.compute-1.
-        amazonaws.com:5432/da93e0gi4o6im';
+		$dbUrl = getenv('DATABASE_URL');
 		// Get the various parts of the DB Connection from the URL
 		$dbopts = parse_url($dbUrl);
-		$dbHost = $dbopts["hoec2-54-205-187-125.compute-1.amazonaws.comst"];
-		$dbPort = $dbopts["5432"];
-		$dbUser = $dbopts["xypjmqpkzlscmu"];
-		$dbPassword = $dbopts["24437885416e4c873ae74d4cd981752da2ee80926fb1c77adbb91f1cc08d9fb0"];
+		$dbHost = $dbopts["host"];
+		$dbPort = $dbopts["port"];
+		$dbUser = $dbopts["user"];
+		$dbPassword = $dbopts["pass"];
 		$dbName = ltrim($dbopts["path"],'/');
 		// Tell PDO to give us exception errors for debugging in needed
 		$dbOptions = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
