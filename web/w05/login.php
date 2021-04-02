@@ -1,6 +1,8 @@
-<?php require "./dbConnect.php";
+<?php 
+session_start();
+require "./dbConnect.php";
 $db = get_db();
-// session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
