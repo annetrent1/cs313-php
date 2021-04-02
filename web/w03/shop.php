@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,8 +8,8 @@
     </head>
 <body> 
 
+
 <h1>Plant Shop</h1>
-<?php echo "hello" ?>
 
 <form action="./shop03.php">
     <div class="items_container">
@@ -123,6 +126,12 @@
                 >
             </div>
         </div>
+        <?php
+        // Set session variables
+        $cartBOP = $_SESSION["cartBOP"];
+
+         $_SESSION["cartBOP"] = $cartBOP;
+        ?>
 
     </div>
     <input type="submit" value="Add to Cart">
