@@ -1,4 +1,4 @@
-<?php require "./dbConnect.php";
+<?php require "./test.php";
 $db = get_db();
 ?>
 <!DOCTYPE html>
