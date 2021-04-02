@@ -1,27 +1,25 @@
 <?php
 function get_db() {
-    $db = NULL
-	try
-	{
+	try {
+		// Default Heroku Postgres configuration URL
 		$dbUrl = getenv('DATABASE_URL');
-
-		$dbOpts = parse_url($dbUrl);
-
-		$dbHost = $dbOpts["host"];
-		$dbPort = $dbOpts["port"];
-		$dbUser = $dbOpts["user"];
-		$dbPassword = $dbOpts["pass"];
-		$dbName = ltrim($dbOpts["path"],'/');
-
-		$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		// Get the various parts of the DB Connection from the URL
+		$dbopts = parse_url($dbUrl);
+		$dbHost = $dbopts["host"];
+		$dbPort = $dbopts["port"];
+		$dbUser = $dbopts["user"];
+		$dbPassword = $dbopts["pass"];
+		$dbName = ltrim($dbopts["path"],'/');
+		// Tell PDO to give us exception errors for debugging in needed
+		$dbOptions = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
+		// Create the PDO connection for PGSQL
+		$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword, $dbOptions);
+		return $db;
 	}
-	catch (PDOException $ex)
-	{
-		echo 'Error!: ' . $ex->getMessage();
-		die();
+	catch (PDOException $e) {
+		echo 'Error connecting to DB.';
+		echo 'Details: '.$e; #<-------- for debugging only not for production site (remove me)
+		exit;
 	}
-    return $db;
 }
-	
+

@@ -12,7 +12,7 @@
     </div>
 
     <div class="section">
-        <h2>About me!!</h2>
+        <h2>About me!</h2>
         <div class="about">
             <p class="about-section">Many, many nights ago I had a dream. It was about alpacas. For 3 nights in a row I had dreams about alpacas.
                 I'm no dream interpreter, but I figured I should at least google "Alpacas near me" to see if there was one 

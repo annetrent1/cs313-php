@@ -1,0 +1,17 @@
+.items_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.item {
+  display: flex;
+  flex-direction: column;  
+}
+.quantity_container {
+    display: flex;
+    justify-content: space-between;
+}
+img {
+    width: 250px;
+}
