@@ -4,7 +4,7 @@ $db = get_db();
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- <link rel="stylesheet" href="./w05.css"> -->
+    <link rel="stylesheet" href="./notecard.css">
 </head>
 <body>
 

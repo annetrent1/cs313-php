@@ -13,11 +13,14 @@ $db = get_db();
     </div>
 
     <div class="section">
-        <?php foreach ($db->query('SELECT firstname, password FROM public.user') as $row)
-        {
-        echo 'user: ' . $row['firstname'];
-        echo '<br/>';
-        }?>
+        <?php 
+            $users = $db->query('SELECT firstname, password FROM public.user')
+            foreach ($users)
+            {
+                echo "<p class='user'> $row['firstname'] </p>";
+                echo '<br/>';
+            }
+        ?>
     </div>
 
 
