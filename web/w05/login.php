@@ -40,21 +40,6 @@ if(isset($_POST['login'])){
     </div>
 
     <div class="section">
-        
-        <?php 
-            // $user = $db->prepare("SELECT firstname, lastname FROM public.user");
-            // $user->execute();
-            
-
-            // while ($row = $user->fetch(PDO::FETCH_ASSOC))
-            // {
-                
-            //     $fName = $row['firstname'];
-            //     $lName = $row['lastname'];
-
-            //     echo "<p class='user'>$fName $lName<p>";
-            // }
-        ?>
         <form method="post" action="" >
         <label for="email">Email:</label>
         <input type="text" id="email" name="email"/><br><br>

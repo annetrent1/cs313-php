@@ -3,8 +3,6 @@ session_start();
 require "./dbConnect.php";
 $db = get_db();
 
-    $userid = $_COOKIE['userid'];
-
 ?>
 <!DOCTYPE html>
 <html>
