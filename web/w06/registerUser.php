@@ -7,11 +7,9 @@
         $lastname = $_POST['lastname'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        // if ($front != "" && $back != ""){
-        //     $query = $db->prepare("INSERT INTO public.notecard (stackid, descriptionfront, descriptionback)
-        //     VALUES ( ( SELECT stackid FROM public.stack 
-        //     WHERE stackid=:stackid), 
-        //     :front, :back);");
+        if ($firstname != "" && $lastname != "" && $email != "" && $password != ""){
+            $query = $db->prepare("INSERT INTO public.user (firstname, lastname, email, password)
+            VALUES (:firstname, :lastname, :email, :password);");
         //     $query->bindValue(':stackid', $id, PDO::PARAM_INT);
         //     $query->bindValue(':front', $front, PDO::PARAM_STR);
         //     $query->bindValue(':back', $back, PDO::PARAM_STR);
@@ -19,6 +17,7 @@
         //     $location = "./notecards.php?stackid=$id";
         //     header("Location: $location");
         //     die();
+        }
         
     }
     
