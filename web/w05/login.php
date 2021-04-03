@@ -7,7 +7,6 @@ if(isset($_POST['login'])){
 
     $email = $_POST['email'];
     $password = $_POST['password'];
-    echo "<script> console.log('test'); </script>";
 
     if ($email != "" && $password != ""){
 
@@ -16,12 +15,13 @@ if(isset($_POST['login'])){
         $_SESSION["sql_query"] = $sql_query; 
         
 
+        echo "<script> console.log('test'); </script>";
         if($sql_query > 0){
             $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
             $userid->execute();
             $_SESSION["userid"] = $userid; 
             // setcookie('userid', $userid, time() + (86400), "/");
-            header('Location: ./stacks.php');
+            // header('Location: ./stacks.php');
         }else{
             echo "Invalid username and password";
         }
