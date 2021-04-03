@@ -18,7 +18,7 @@ $db = get_db();
     <div class="section">
         <?php foreach ($db->query("SELECT name, stackid FROM public.stack WHERE userid='1';") as $row)
         {
-            echo '<a href="./notecards.php?stackid=' . $row['stackid'] . '>' .  $row['name'] . '</a>';
+            echo '<a href="./notecards.php?stackid=' . $row['stackid'] . '">' .  $row['name'] . '</a>';
         }
         ?>
     </div>
