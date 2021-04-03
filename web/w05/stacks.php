@@ -2,8 +2,8 @@
 session_start();
 require "./dbConnect.php";
 $db = get_db();
-// $userid = $_SESSION['userid'];
-$userid = '1';
+$userid = $_SESSION['userid'];
+// $userid = '1';
 
 ?>
 <!DOCTYPE html>
