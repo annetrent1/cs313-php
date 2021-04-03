@@ -68,8 +68,7 @@ label {
     box-shadow: 2px 2px 9px rgba(194,194,194,.9);
     cursor:pointer;
 }
-.face {
-   
+.face { 
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
