@@ -1,6 +1,4 @@
 <?php 
-// session_start();
-// $_SESSION['userid'] = '0';
 require "./dbConnect.php";
 $db = get_db();
 
@@ -18,9 +16,6 @@ if(isset($_POST['login'])){
 
         $sql_query = $db->prepare("select count(*) as cntUser from public.user where email='" . $email . "' and password='" . $password . "';");
         $sql_query->execute();
-        
-        
-
         
         if($sql_query > 0){
             $userid = "";
