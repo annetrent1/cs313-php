@@ -23,6 +23,12 @@ $userid = '1';
             echo '<p class="item"><a href="./notecards.php?stackid=' . $row['stackid'] . '">' .  $row['name'] . '</a> </p>';
         }
         ?>
+        <form method="post" action="" >
+            <div class="item">
+                <label for="addstack">Add Stack</label>
+                <input class="input" type="text" id="addstack" name="addstack"/>
+            </div>
+        </form>
     </div>
 
 
