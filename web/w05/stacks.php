@@ -25,8 +25,9 @@ $userid = '1';
         ?>
         <form method="post" action="" >
             <div class="item">
-                <label for="addstack">Add Stack</label>
+                <label for="addstack">Add New Stack</label>
                 <input class="input" type="text" id="addstack" name="addstack"/>
+                <input class="add-button" type="submit" value="Login" name="add" id="add"/>
             </div>
         </form>
     </div>
