@@ -12,7 +12,7 @@ $stackid = $_GET['stackid'];
 <body>
 
     <div class="title">
-        <h1>Notecards</h1>
+        <h1>Notecards <?php echo $stackid ?></h1>
         <form method="post" action="./newNotecard.php" >
                 <input type="hidden" name="stackid" value="<?php echo $stackid?>"/>
                 <input class="add-button" type="submit" value="+"/>
