@@ -20,7 +20,7 @@ $userid = $_SESSION['userid'];
     </div>
 
     <div class="section">
-        <?php foreach ($db->query("SELECT name, stackid FROM public.stack WHERE userid='1';") as $row)
+        <?php foreach ($db->query("SELECT name, stackid FROM public.stack WHERE userid='" . $userid . "';") as $row)
         {
             echo '<a href="./notecards.php?stackid=' . $row['stackid'] . '">' .  $row['name'] . '</a>';
         }
