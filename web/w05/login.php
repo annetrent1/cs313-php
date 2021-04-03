@@ -19,7 +19,7 @@ if(isset($_POST['login'])){
             $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
             $userid->execute();
             $_SESSION['userid'] = $userid;
-            $userid = $_SESSION['useris'];
+            $userid = $_SESSION['userid'];
             header('Location: ./notecard.php');
         }else{
             echo "Invalid username and password";

@@ -1,7 +1,7 @@
 <?php 
 require "./dbConnect.php";
 $db = get_db();
-$userid = $_GET['userid'];
+$userid = $_SESSION['userid'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,7 +11,7 @@ $userid = $_GET['userid'];
 <body>
 
     <div class="title">
-        <h1>Notecards <?php echo "hello".$_SESSION['sql_query'] ?></h1>
+        <h1>Notecards <?php echo "hello".$userid ?></h1>
     </div>
 
     <div class="section">
