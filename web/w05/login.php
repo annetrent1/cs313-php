@@ -51,7 +51,6 @@ if(isset($_POST['login'])){
         <input type="submit" value="Login" name="login" id="login"/>
         </form>
 
-        <?php echo "<p>$_SESSION['userid']</p>" ?>
     </div>
     
 
