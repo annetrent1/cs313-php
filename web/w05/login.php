@@ -42,12 +42,6 @@ if(isset($_POST['login'])){
         <h1>Login</h1>
     </div>
 
-    <?php 
-     $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
-     $userid->execute();
-     echo $userid;
-    ?>
-
     <div class="section">
         <form method="post" action="" >
         <label for="email">Email:</label>
@@ -58,6 +52,11 @@ if(isset($_POST['login'])){
         </form>
 
     </div>
+    <?php 
+     $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
+     $userid->execute();
+     echo $userid;
+    ?>
     
 
 
