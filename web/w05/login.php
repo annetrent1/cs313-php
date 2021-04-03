@@ -51,7 +51,7 @@ if(isset($_POST['login'])){
         <input type="text" id="email" name="email"/><br><br>
         <label for="password">Password:</label>
         <input type="text" id="password" name="password"/>
-        <input type="submit" value="Login" name="login" id="login"/>
+        <buton type="submit" value="Login" name="login" id="login"/>
         </form>
 
     </div>
