@@ -33,7 +33,7 @@ if(isset($_POST['login'])){
 
 }
 if(isset($_POST['register'])){
-    header('Location: ./RegisterUser.php');
+    header('Location: ./registerUser.php');
     die();
 }
 ?>
