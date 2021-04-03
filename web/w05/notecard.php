@@ -1,7 +1,9 @@
 <?php 
 require "./dbConnect.php";
 $db = get_db();
-$userid = $_COOKIE['userid'];
+if(!isset($_COOKIE[$cookie_name])) {
+    $userid = $_COOKIE['userid'];
+}
 ?>
 <!DOCTYPE html>
 <html>

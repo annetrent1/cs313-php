@@ -18,7 +18,7 @@ if(isset($_POST['login'])){
         if($sql_query > 0){
             $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
             $userid->execute();
-            $_COOKIE['userid'] = $userid;
+            setcookie('userId', $userid, time() + (86400), "/");
             header('Location: ./notecard.php');
         }else{
             echo "Invalid username and password";
