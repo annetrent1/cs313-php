@@ -1,6 +1,8 @@
 <?php 
 require "./dbConnect.php";
 $db = get_db();
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +12,7 @@ $db = get_db();
 <body>
 
     <div class="title">
-        <h1>Notecards</h1>
+        <h1>Stacks</h1>
     </div>
 
     <div class="section">
