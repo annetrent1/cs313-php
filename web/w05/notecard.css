@@ -56,10 +56,10 @@ label {
     height: 4rem;
     width: 80%;
     border: 1px solid black;
-    @include transition(.6s ease-in);
-    @include transform-style(preserve-3d);
+    transition(.6s ease-in);
+    transform-style(preserve-3d);
     &:hover {
-      @include transform(rotateY(180deg));
+      transform(rotateY(180deg));
     }
     p {
       font-size: 1em/.9;
@@ -69,7 +69,7 @@ label {
     }
     div {
       position: absolute;
-      @include backface-visibility(hidden);
+      backface-visibility(hidden);
       width: 100%;
       margin: 0 auto;
     }
@@ -78,6 +78,6 @@ label {
     }
     .back {
       z-index: 50;
-      @include transform(rotateY(-180deg));
+      transform(rotateY(-180deg));
     }
   }
