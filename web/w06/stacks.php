@@ -27,6 +27,7 @@ $_SESSION['userid'] = $userid;
         <form method="post" action="./insertStack.php" >
             <div class="item">
                 <label for="addstack">Add New Stack</label>
+                <input type="hidden" name="userid" value="<?php echo $userid?>"/>
                 <input class="input" type="text" id="addstack" name="addstack"/>
                 <input class="add-button" type="submit" value="+"/>
             </div>
