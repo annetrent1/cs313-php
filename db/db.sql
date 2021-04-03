@@ -17,7 +17,7 @@ CREATE TABLE public.notecard (
     notecardID BIGSERIAL NOT NULL PRIMARY KEY, 
     stackID BIGINT NOT NULL REFERENCES public.stack(stackID),
     titleFront VARCHAR(50),
-    decriptionFront VARCHAR(3000) NOT NULL,
+    descriptionFront VARCHAR(3000) NOT NULL,
     titleBack VARCHAR(50),
     descriptionBack VARCHAR(3000) NOT NULL
 );
@@ -37,7 +37,7 @@ VALUES ( ( SELECT userID FROM public.user
     WHERE firstName='Nate' AND lastName='Gillis')
     , 'Philosophy' );
 
-INSERT INTO public.notecard (stackID, titleFront, decriptionFront, titleBack, descriptionBack)
+INSERT INTO public.notecard (stackID, titleFront, descriptionFront, titleBack, descriptionBack)
 VALUES ( ( SELECT stackID FROM public.stack 
     WHERE name='DNA')
     , 'Chromosomes'
@@ -88,7 +88,7 @@ VALUES ( ( SELECT stackID FROM public.stack
     , ' iterative and incremental' );
 
 
-    INSERT INTO public.notecard (stackID, decriptionFront, descriptionBack)
+    INSERT INTO public.notecard (stackID, descriptionFront, descriptionBack)
     VALUES ( ( SELECT stackID FROM public.stack 
     WHERE name='Philosophy')
     , 'Stoicism '
