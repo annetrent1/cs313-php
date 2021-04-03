@@ -56,7 +56,7 @@ if(isset($_POST['login'])){
      $userid = $db->prepare("select userid from public.user where email='anne@anne.com' and password='pass';");
      $userid->bindValue(':userid', $userid);
      $userid->execute();
-     echo $userid;
+     echo "<p> " . " $userid " . "</p>";
     ?>
     
 
