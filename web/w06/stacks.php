@@ -24,11 +24,11 @@ $_SESSION['userid'] = $userid;
             echo '<p class="item"><a href="./notecards.php?stackid=' . $row['stackid'] . '">' .  $row['name'] . '</a> </p>';
         }
         ?>
-        <form method="post" action="" >
+        <form method="post" action="./insertStack.php" >
             <div class="item">
                 <label for="addstack">Add New Stack</label>
                 <input class="input" type="text" id="addstack" name="addstack"/>
-                <input class="add-button" type="submit" value="+" name="add" id="add"/>
+                <input class="add-button" type="submit" value="+"/>
             </div>
         </form>
     </div>
