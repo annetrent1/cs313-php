@@ -2,7 +2,7 @@
     $stackid = $_POST['stackid'];
     session_start();
     $_SESSION['stackid'] = $stackid;
-    $id = $_SESSION['stackid'];
+    $id = '1';
     // $stackid = '1';
     require "./dbConnect.php";
     $db = get_db();
