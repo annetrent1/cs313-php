@@ -13,7 +13,7 @@ $userid = $_SESSION['userid'];
 <body>
 
     <div class="title">
-        <h1>Stacks</h1>
+        <h1>Stacks <?php echo $userid?></h1>
     </div>
 
     <div class="section">
