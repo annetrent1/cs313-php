@@ -15,11 +15,12 @@ $stackid = $_GET['stackid'];
         <h1>Notecards</h1>
     </div>
 
-    <div class="section">
-        <?php foreach ($db->query("SELECT descriptionfront FROM public.notecard WHERE stackid='" . $stackid . "';") as $row)
+    <div class="note-section">
+        <?php foreach ($db->query("SELECT descriptionfront, descriptionback FROM public.notecard WHERE stackid='" . $stackid . "';") as $row)
         {
             echo '<div class="notecard-item">';
             echo '<p> ' . $row['descriptionfront'] . '</p>';
+            echo '<p> ' . $row['descriptionback'] . '</p>';
             echo '</div>';
         }
         ?>
