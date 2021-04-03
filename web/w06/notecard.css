@@ -45,6 +45,7 @@ label {
     padding: 2px;
 }
 .input-container {
+    margin: 10px auto;
     width: 50%;
     max-width: 500px;
 }
