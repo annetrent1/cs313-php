@@ -27,7 +27,7 @@
 
     <div class="section">
         <form method="post" action="" >
-            <div class="item">
+            <div class="input-container">
                 <div class="input-section">
                     <label for="addstack">Front</label>
                     <input class="input" type="text" id="descriptionfront" name="descriptionfront"/>
