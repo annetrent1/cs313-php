@@ -22,7 +22,7 @@ if(isset($_POST['login'])){
             $_SESSION["userid"] = $userid; 
             
             // setcookie('userid', $userid, time() + (86400), "/");
-            header('Location: ./stacks.php?' . $userid);
+            header('Location: ./stacks.php?userid="' . $userid . '"');
         }else{
             echo "Invalid username and password";
         }
@@ -58,7 +58,7 @@ if(isset($_POST['login'])){
     //  echo "<p> " . " $result " . "</p>";
      foreach ($db->query("SELECT userid FROM public.user WHERE email='anne.anne';") as $row)
         {
-            echo '<p>' . $row['userid'] . '</p>';
+            echo '<p>' . $row['stackid'] . '</p>';
         }
     ?>
     
