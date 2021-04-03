@@ -1,9 +1,9 @@
 <?php
     $stackid = $_POST['stackid'];
-    // session_start();
-    // $_SESSION['stackid'] = $stackid;
-    $id = $stackid;
-    // $stackid = '1';
+    session_start();
+    $_SESSION['stackid'] = $stackid;
+    $stackid = $_SESSION['stackid'];
+
     require "./dbConnect.php";
     $db = get_db();
 
@@ -13,9 +13,9 @@
         if ($front != "" && $back != ""){
             $query = $db->prepare("INSERT INTO public.notecard (stackid, descriptionfront, descriptionback)
             VALUES ( ( SELECT stackid FROM public.stack 
-            WHERE stackid=:id), 
+            WHERE stackid=:stackid), 
             :front, :back);");
-            $query->bindValue(':id', $id, PDO::PARAM_INT);
+            $query->bindValue(':stackid', $stackid, PDO::PARAM_INT);
             $query->bindValue(':front', $front, PDO::PARAM_STR);
             $query->bindValue(':back', $back, PDO::PARAM_STR);
             $query->execute();
