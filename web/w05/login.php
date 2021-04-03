@@ -56,7 +56,7 @@ if(isset($_POST['login'])){
             //     echo "<p class='user'>$fName $lName<p>";
             // }
         ?>
-        <form method="post" action="" >
+        <form method="post" action="./notecard.php" >
         <label for="email">Email:</label>
         <input type="text" id="email" name="email"/><br><br>
         <label for="password">Password:</label>
