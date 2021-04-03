@@ -10,13 +10,17 @@ if(isset($_POST['login'])){
 
     if ($email != "" && $password != ""){
 
-        $sql_query = $db->prepare("select count(*) as cntUser from public.user where email='$email' and password='$password';");
+        $sql_query = $db->prepare("select count(*) as cntUser from public.user where email='" . $email . "' and password='" . $password . "';");
         $sql_query->execute();
         $_SESSION["sql_query"] = $sql_query; 
         
 
         
         if($sql_query > 0){
+            // foreach ($db->query("SELECT userid FROM public.user WHERE email='anne@anne.com';") as $row)
+            // {
+            //     $userid =  '<p>' . $row["userid"] . '</p>';
+            // }
             $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
             $userid->execute();
             $_SESSION["userid"] = $userid; 
@@ -56,10 +60,7 @@ if(isset($_POST['login'])){
     //  $statement = "SELECT userid FROM public.user WHERE email='anne@anne.com' AND password='pass'";
     //  $result = $db->query($statement);
     //  echo "<p> " . " $result " . "</p>";
-     foreach ($db->query("SELECT userid FROM public.user WHERE email='anne@anne.com';") as $row)
-        {
-            echo '<p>' . $row["userid"] . '</p>';
-        }
+     
     ?>
     
 
