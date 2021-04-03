@@ -3,6 +3,11 @@
     // $stackid = 1;
     require "./dbConnect.php";
     $db = get_db();
+
+    if(isset($_POST['submit'])) {
+        $front = $_POST['front'];
+        $back = $_POST['back'];
+    }
     
     // $query = $db->prepare("INSERT INTO public.stack (userID, name)
     //     VALUES ( ( SELECT userID FROM public.user 
@@ -29,12 +34,12 @@
         <form method="post" action="" >
             <div class="input-container">
                 <div class="input-section">
-                    <label for="descriptionfront">Front</label>
-                    <input class="input" type="text" id="descriptionfront" name="descriptionfront"/>
+                    <label for="front">Front</label>
+                    <input class="input" type="text" id="front" name="front"/>
                 </div>
                 <div class="input-section">
-                    <label for="descriptionback">Back</label>
-                    <input class="input" type="text" id="descriptionback" name="descriptionback"/>
+                    <label for="back">Back</label>
+                    <input class="input" type="text" id="back" name="back"/>
                 </div>
                 <div class="button-section">
                     <input class="add-button" type="submit" value="Submit"/>

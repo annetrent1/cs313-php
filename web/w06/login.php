@@ -3,14 +3,12 @@ require "./dbConnect.php";
 $db = get_db();
 
 if(isset($_POST['login'])){
-    $_SESSION['userid'] = '3'; 
     $email = $_POST['email'];
     $password = $_POST['password'];
     foreach ($db->query("SELECT userid FROM public.user WHERE email='" . $email . "';") as $row)
     {
         $userid = $row['userid'];
     }
-    
 
     if ($email != "" && $password != ""){
 
