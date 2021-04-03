@@ -54,9 +54,9 @@ if(isset($_POST['login'])){
         ?>
         <form method="post" action="" >
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" value="anne@anne.com"/><br><br>
+        <input type="text" id="email" name="email"/><br><br>
         <label for="password">Password:</label>
-        <input type="text" id="password" name="password" value="pass"/>
+        <input type="text" id="password" name="password"/>
         <input type="submit" value="Login" name="login" id="login"/>
         </form>
 
