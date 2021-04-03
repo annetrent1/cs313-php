@@ -12,6 +12,7 @@ if(isset($_POST['login'])){
 
         $sql_query = $db->prepare("select count(*) as cntUser from public.user where email='$email' and password='$password';");
         $sql_query->execute();
+        echo "console.log('hello');"
         $result = mysqli_query($con,$sql_query);
         $row = mysqli_fetch_array($result);
 
