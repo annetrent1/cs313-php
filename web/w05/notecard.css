@@ -50,6 +50,10 @@ label {
     font-size: 1.4rem;
     padding: 1px; 
 }
+.note-section {
+    display: flex;
+    flex-direction: column;
+}
 .notecard-container {
     perspective: 1000;
 }
