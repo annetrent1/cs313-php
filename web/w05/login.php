@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$_SESSION["userid"] = '0';
 require "./dbConnect.php";
 $db = get_db();
 
