@@ -49,7 +49,7 @@ if(isset($_POST['login'])){
         <form method="post" action="" >
             <div class="login-section">
                 <label for="email">Email:</label>
-                <input type="text" id="email" name="email"/><br><br>
+                <input type="text" id="email" name="email"/>
             </div>
             <div class="login-section">
                 <label for="password">Password:</label>
