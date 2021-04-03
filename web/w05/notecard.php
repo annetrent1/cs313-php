@@ -1,7 +1,6 @@
 <?php 
 require "./dbConnect.php";
 $db = get_db();
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,13 +10,13 @@ $db = get_db();
 <body>
 
     <div class="title">
-        <h1>Notecards <?php echo $_COOKIE['userid'] ?></h1>
+        <h1>Notecards</h1>
     </div>
 
     <div class="section">
-        <?php foreach ($db->query('SELECT firstname, password FROM public.user') as $row)
+        <?php foreach ($db->query('SELECT names FROM public.stacks WHERE userid="1";) as $row)
         {
-        echo 'user: ' . $row['firstname'];
+        echo 'stacks: ' . $row['stacks'];
         echo '<br/>';
         }?>
     </div>
