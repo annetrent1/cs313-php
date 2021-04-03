@@ -16,7 +16,7 @@
         //     $location = "./notecards.php?stackid=$id";
         //     header("Location: $location");
         //     die();
-        }
+        
     }
     
   
