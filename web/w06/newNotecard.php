@@ -28,11 +28,17 @@
     <div class="section">
         <form method="post" action="" >
             <div class="item">
-                <label for="addstack">Front</label>
-                <input class="input" type="text" id="descriptionfront" name="descriptionfront"/>
-                <label for="addstack">Back</label>
-                <input class="input" type="text" id="descriptionback" name="descriptionback"/>
-                <input class="add-button" type="submit" value="Submit"/>
+                <div class="input-section">
+                    <label for="addstack">Front</label>
+                    <input class="input" type="text" id="descriptionfront" name="descriptionfront"/>
+                </div>
+                <div class="input-section">
+                    <label for="addstack">Back</label>
+                    <input class="input" type="text" id="descriptionback" name="descriptionback"/>
+                </div>
+                <div class="button-section">
+                    <input class="add-button" type="submit" value="Submit"/>
+                </div>
             </div>
         </form>
     </div>

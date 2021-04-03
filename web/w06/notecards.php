@@ -16,7 +16,6 @@ $stackid = $_GET['stackid'];
         <form method="post" action="./newNotecard.php" >
                 <input type="hidden" name="stackid" value="<?php echo $stackid?>"/>
                 <input class="add-button" type="submit" value="+"/>
-            </div>
         </form>
     </div>
 

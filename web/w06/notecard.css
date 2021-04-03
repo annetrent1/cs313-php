@@ -30,12 +30,12 @@ label {
     width: 500px;
     background:  hsla(184, 72%, 50%, .1);
 }
-.login-section {
+.input-section {
     display: flex;
     justify-content: space-between;
     margin: 5px 0;
 }
-.login-button-section {
+.button-section {
     display: flex;
     justify-content: flex-end;
 }
