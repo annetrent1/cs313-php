@@ -30,7 +30,6 @@ if(isset($_POST['login'])){
             }
             session_start();
             $_SESSION["userid"] = $userid; 
-            $_SESSION["sql_query"] = $sql_query; 
             header('Location: ./stacks.php');
         }else{
             echo "Invalid username and password";
