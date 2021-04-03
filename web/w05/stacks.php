@@ -2,7 +2,7 @@
 session_start();
 require "./dbConnect.php";
 $db = get_db();
-// $_SESSION['userid'] = $userid;
+$userid = $_SESSION['userid'];
 
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ $db = get_db();
     <div class="title">
         <h1>Stacks </h1>
         <?php 
-            echo "<h2>" . $_SESSION['userid'] . "</h2>";
+            echo "<h2>" . $userid . "</h2>";
         ?>
     </div>
 
