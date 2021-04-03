@@ -1,3 +1,4 @@
+/* Card flipping logic https://codepen.io/sumi419/pen/KeeVqd?editors=1100 */
 * {
     padding: 0;
     margin: 0;
@@ -56,6 +57,8 @@ label {
 }
 .notecard-container {
     perspective: 1000;
+    height: 100px;
+    width: 50%;
 }
 .notecard {
     transform-style: preserve-3d;
@@ -73,7 +76,7 @@ label {
     height: 100%;
     backface-visibility: hidden;
   }
-  .face.back {
+.face.back {
     display: block;
     transform: rotateY(180deg);
     box-sizing: border-box;
@@ -83,4 +86,5 @@ label {
     background-color: #dddddd;
     font-size:1em;
   }
+
    
