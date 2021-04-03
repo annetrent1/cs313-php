@@ -14,7 +14,7 @@
             $query->bindValue(':lastname', $lastname, PDO::PARAM_STR);
             $query->bindValue(':email', $email, PDO::PARAM_STR);
             $query->bindValue(':password', $password, PDO::PARAM_STR);
-        //     $query->execute();
+            $query->execute();
         //     $location = "./notecards.php?stackid=$id";
         //     header("Location: $location");
         //     die();
