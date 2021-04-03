@@ -53,9 +53,13 @@ if(isset($_POST['login'])){
 
     </div>
     <?php 
-     $statement = "select userid from public.user where email='anne@anne.com' and password='pass';";
+     $statement = "SELECT userid from public.user where email='anne@anne.com' and password='pass';";
      $result = $db->query($statement);
      echo "<p> " . " $result " . "</p>";
+    //  foreach ($db->query("SELECT name, stackid FROM public.stack WHERE userid='1';") as $row)
+    //     {
+    //         echo '<a href="./notecards.php?stackid=' . $row['stackid'] . '">' .  $row['name'] . '</a>';
+    //     }
     ?>
     
 
