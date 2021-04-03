@@ -20,7 +20,7 @@ if(isset($_POST['login'])){
             $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
             $userid->execute();
             $_SESSION["userid"] = $userid; 
-            echo "<script> console.log('test'); </script>";
+            echo "<script> console.log(" . $userid . "); </script>";
             // setcookie('userid', $userid, time() + (86400), "/");
             // header('Location: ./stacks.php');
         }else{
