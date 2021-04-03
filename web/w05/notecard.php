@@ -14,7 +14,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 <body>
 
     <div class="title">
-        <h1>Notecards <?php echo "hello".$userid ?></h1>
+        <h1>Notecards <?php echo ".$userid." ?></h1>
     </div>
 
     <div class="section">
