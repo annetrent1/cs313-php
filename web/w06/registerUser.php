@@ -3,7 +3,10 @@
     $db = get_db();
 
     if(isset($_POST['submit'])) {
-        // $front = $_POST['front'];
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
         // if ($front != "" && $back != ""){
         //     $query = $db->prepare("INSERT INTO public.notecard (stackid, descriptionfront, descriptionback)
         //     VALUES ( ( SELECT stackid FROM public.stack 
