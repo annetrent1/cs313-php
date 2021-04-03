@@ -22,7 +22,7 @@ if(isset($_POST['login'])){
             $_SESSION["userid"] = $userid; 
             
             // setcookie('userid', $userid, time() + (86400), "/");
-            // header('Location: ./stacks.php');
+            header('Location: ./stacks.php');
         }else{
             echo "Invalid username and password";
         }
