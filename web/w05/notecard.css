@@ -54,13 +54,13 @@ label {
 .note-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 .notecard-container {
     perspective: 1000;
     height: 100px;
     width: 50%;
     background-color: #dddddd;
+    margin: 5px auto;
 }
 .notecard {
     transform-style: preserve-3d;
