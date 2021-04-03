@@ -30,7 +30,9 @@ label {
     justify-content: space-between;
     margin: 5px 0;
 }
-.login-section {
+.login-button {
     display: flex;
     justify-content: flex-end;
+    border: 2px solid #000000;
+    font-size: 1.5rem;
 }
