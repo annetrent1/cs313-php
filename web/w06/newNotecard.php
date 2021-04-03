@@ -47,7 +47,7 @@
                     <input class="input" type="text" id="back" name="back"/>
                 </div>
                 <div class="button-section">
-                    <input class="add-button" type="submit" value="Submit"/>
+                    <input class="add-button" type="submit" name="submit" id="submit" value="Submit"/>
                 </div>
             </div>
         </form>
