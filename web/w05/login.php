@@ -1,25 +1,24 @@
 <?php 
-// session_start();
+session_start();
 require "./dbConnect.php";
 $db = get_db();
 
 if(isset($_POST['login'])){
 
-    $email = mysqli_real_escape_string($con,$_POST['email']);
-    $password = mysqli_real_escape_string($con,$_POST['password']);
+    $email = mysqli_real_escape_string($db,$_POST['email']);
+    $password = mysqli_real_escape_string($db,$_POST['password']);
 
     if ($email != "" && $password != ""){
 
         $sql_query = $db->prepare("select count(*) as cntUser from public.user where email='$email' and password='$password';");
         $sql_query->execute();
-        echo "console.log('hello');"
-        $result = mysqli_query($con,$sql_query);
+        $result = mysqli_query($db,$sql_query);
         $row = mysqli_fetch_array($result);
 
         $count = $row['cntUser'];
 
         if($count > 0){
-            // $_SESSION['email'] = $email;
+            $_SESSION['email'] = $email;
             header('Location: ./notecard.php');
         }else{
             echo "Invalid username and password";
