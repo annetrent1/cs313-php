@@ -29,11 +29,11 @@
         <form method="post" action="" >
             <div class="input-container">
                 <div class="input-section">
-                    <label for="addstack">Front  </label>
+                    <label for="descriptionfront">Front</label>
                     <input class="input" type="text" id="descriptionfront" name="descriptionfront"/>
                 </div>
                 <div class="input-section">
-                    <label for="addstack">Back  </label>
+                    <label for="descriptionback">Back</label>
                     <input class="input" type="text" id="descriptionback" name="descriptionback"/>
                 </div>
                 <div class="button-section">
