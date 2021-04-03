@@ -59,7 +59,7 @@ label {
     perspective: 1000;
     height: 100px;
     width: 50%;
-    background-color: #dddddd;
+    background-color:hsla(184, 72%, 50%, .2);
     margin: 5px auto;
 }
 .notecard {
@@ -87,9 +87,6 @@ label {
     color: black;
     text-align: center;
     font-size:1em;
-  }
-  .back {
-      margin: auto 0;
   }
 
    
