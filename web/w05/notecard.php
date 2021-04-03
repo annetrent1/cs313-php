@@ -14,11 +14,7 @@ $db = get_db();
     </div>
 
     <div class="section">
-        <?php foreach ($db->query("SELECT names FROM public.stack WHERE userid='1'";) as $row)
-        {
-        echo 'stacks: ' . $row['stack'];
-        echo '<br/>';
-        }?>
+        
     </div>
 
 
