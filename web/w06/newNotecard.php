@@ -18,7 +18,7 @@
             $query->bindValue(':front', $front, PDO::PARAM_STR);
             $query->bindValue(':back', $back, PDO::PARAM_STR);
             $query->execute();
-            $location = "./notecards.php?stackid='$stackid'";
+            // $location = "./notecards.php?stackid='$stackid'";
             // header("Location: $location");
             // die();
         }
