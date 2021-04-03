@@ -12,7 +12,7 @@ $userid = $_SESSION['userid'];
 <body>
 
     <div class="title">
-        <h1>Notecards <?php echo $userid ?></h1>
+        <h1>Notecards <?php echo "$userid" ?></h1>
     </div>
 
     <div class="section">
