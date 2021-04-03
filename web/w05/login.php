@@ -17,6 +17,7 @@ if(isset($_POST['login'])){
 
         
         if($sql_query > 0){
+            $userid = "";
             foreach ($db->query("SELECT userid FROM public.user WHERE email='" . $email . "';") as $row)
             {
                 $userid = $row["userid"];
