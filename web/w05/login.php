@@ -18,8 +18,9 @@ if(isset($_POST['login'])){
         if($sql_query > 0){
             $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
             $userid->execute();
-            setcookie('userd', $userid, time() + (86400), "/");
-            header('Location: ./notecard.php');
+            $_SESSION["userid"] = $userid; 
+            // setcookie('userid', $userid, time() + (86400), "/");
+            header('Location: ./stacks.php');
         }else{
             echo "Invalid username and password";
         }
