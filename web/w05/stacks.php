@@ -27,7 +27,7 @@ $userid = '1';
             <div class="item">
                 <label for="addstack">Add New Stack</label>
                 <input class="input" type="text" id="addstack" name="addstack"/>
-                <input class="add-button" type="submit" value="Login" name="add" id="add"/>
+                <input class="add-button" type="submit" value="+" name="add" id="add"/>
             </div>
         </form>
     </div>
