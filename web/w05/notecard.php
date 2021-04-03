@@ -1,5 +1,6 @@
 <?php require "./dbConnect.php";
 $db = get_db();
+$userid = session['userid'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,7 +10,7 @@ $db = get_db();
 <body>
 
     <div class="title">
-        <h1>Notecards <?php echo "Hello" ?></h1>
+        <h1>Notecards <?php echo $userid ?></h1>
     </div>
 
     <div class="section">
