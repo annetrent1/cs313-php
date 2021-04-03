@@ -45,7 +45,8 @@ label {
     padding: 2px;
 }
 .input-container {
-    width: 500px;
+    width: 50%;
+    max-width: 500px;
 }
 .section {
     margin: 10px;
