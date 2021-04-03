@@ -1,6 +1,6 @@
 <?php 
-session_start();
-$_SESSION['userid'] = '0';
+// session_start();
+// $_SESSION['userid'] = '0';
 require "./dbConnect.php";
 $db = get_db();
 
@@ -30,6 +30,7 @@ if(isset($_POST['login'])){
             }
             // $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
             // $userid->execute();
+            session_start();
             $_SESSION["userid"] = $userid; 
             
             // setcookie('userid', $userid, time() + (86400), "/");
