@@ -18,7 +18,7 @@ if(isset($_POST['login'])){
 
         $sql_query = $db->prepare("select count(*) as cntUser from public.user where email='" . $email . "' and password='" . $password . "';");
         $sql_query->execute();
-        $_SESSION["sql_query"] = $sql_query; 
+        
         
 
         
@@ -28,12 +28,9 @@ if(isset($_POST['login'])){
             {
                 $userid = $row['userid'];
             }
-            // $userid = $db->prepare("SELECT userid FROM public.user WHERE email='" . $email . "';");
-            // $userid->execute();
             session_start();
             $_SESSION["userid"] = $userid; 
-            
-            // setcookie('userid', $userid, time() + (86400), "/");
+            $_SESSION["sql_query"] = $sql_query; 
             header('Location: ./stacks.php');
         }else{
             echo "Invalid username and password";
@@ -64,21 +61,6 @@ if(isset($_POST['login'])){
         </form>
 
     </div>
-    <?php 
-    //  $statement = "SELECT userid FROM public.user WHERE email='anne@anne.com' AND password='pass'";
-    //  $result = $db->query($statement);
-    //  echo "<p> " . " $result " . "</p>";
-    $tryme = "nate@email.com";
-    foreach ($db->query("SELECT userid FROM public.user WHERE email='" . $tryme . "';") as $row)
-    {
-        echo  '<p>' . $row["userid"] . '</p>';
-    }
-    // $tryme = $db->prepare("SELECT userid FROM public.user WHERE email='" . $email . "';");
-    // $tryme->execute();
-    // echo  '<p>' . $userid . '</p>';
-    ?>
-    
-
 
 </body>
 </html>

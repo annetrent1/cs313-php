@@ -3,6 +3,7 @@ session_start();
 require "./dbConnect.php";
 $db = get_db();
 $userid = $_SESSION['userid'];
+$loggedin = $_SESSION['sql_query'];
 
 ?>
 <!DOCTYPE html>
@@ -15,7 +16,7 @@ $userid = $_SESSION['userid'];
     <div class="title">
         <h1>Stacks </h1>
         <?php 
-            echo "<h2>" . $userid . "</h2>";
+            echo "<h2>" . $userid . " and " . $loggedin . " </h2>";
         ?>
     </div>
 
