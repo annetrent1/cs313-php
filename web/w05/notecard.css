@@ -60,6 +60,7 @@ label {
     perspective: 1000;
     height: 100px;
     width: 50%;
+    background-color: #dddddd;
 }
 .notecard {
     transform-style: preserve-3d;
@@ -85,7 +86,6 @@ label {
     padding: 5px;
     color: black;
     text-align: center;
-    background-color: #dddddd;
     font-size:1em;
   }
 
