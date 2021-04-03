@@ -12,6 +12,7 @@ if(isset($_POST['login'])){
 
         $sql_query = $db->prepare("select count(*) as cntUser from public.user where email='$email' and password='$password';");
         $sql_query->execute();
+        $_SESSION["sql_query"] = $sql_query; 
         
 
         if($sql_query > 0){

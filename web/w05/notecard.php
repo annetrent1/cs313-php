@@ -11,7 +11,7 @@ $userid = $_SESSION['userid'];
 <body>
 
     <div class="title">
-        <h1>Notecards <?php echo $_SESSION['userid'] ?></h1>
+        <h1>Notecards <?php echo $_SESSION['sql_query'] ?></h1>
     </div>
 
     <div class="section">
