@@ -20,7 +20,7 @@
             $query->execute();
             $location = "./notecards.php?stackid='$stackid'";
             header("Location: $location");
-            die();
+            // die();
         }
     }
     
