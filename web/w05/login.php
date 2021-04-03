@@ -17,12 +17,12 @@ if(isset($_POST['login'])){
 
         
         if($sql_query > 0){
-            // foreach ($db->query("SELECT userid FROM public.user WHERE email='anne@anne.com';") as $row)
-            // {
-            //     $userid =  '<p>' . $row["userid"] . '</p>';
-            // }
-            $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
-            $userid->execute();
+            foreach ($db->query("SELECT userid FROM public.user WHERE email='$email';") as $row)
+            {
+                $userid =  '<p>' . $row["userid"] . '</p>';
+            }
+            // $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
+            // $userid->execute();
             $_SESSION["userid"] = $userid; 
             
             // setcookie('userid', $userid, time() + (86400), "/");
