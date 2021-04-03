@@ -16,8 +16,7 @@ $userid = $_SESSION["userid"];
     <div class="title">
         <h1>Stacks </h1>
         <?php 
-            $rawr = "MEOW";
-            echo "<h2>" . $rawr . "</h2>";
+            echo "<h2>" . $userid . "</h2>";
         ?>
     </div>
 
