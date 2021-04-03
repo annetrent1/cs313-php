@@ -24,12 +24,12 @@ if(isset($_POST['login'])){
         
         if($sql_query > 0){
             $userid = "";
-            foreach ($db->query("SELECT userid FROM public.user WHERE email='" . $email . "';") as $row)
-            {
-                $userid = $row['userid'];
-            }
-            // $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
-            // $userid->execute();
+            // foreach ($db->query("SELECT userid FROM public.user WHERE email='" . $email . "';") as $row)
+            // {
+            //     $userid = $row['userid'];
+            // }
+            $userid = $db->prepare("SELECT userid FROM public.user WHERE email='" . $email . "';");
+            $userid->execute();
             session_start();
             $_SESSION["userid"] = $userid; 
             
@@ -73,6 +73,9 @@ if(isset($_POST['login'])){
     {
         echo  '<p>' . $row["userid"] . '</p>';
     }
+    $tryme = $db->prepare("SELECT userid FROM public.user WHERE email='" . $email . "';");
+    $tryme->execute();
+    echo  '<p>' . $userid . '</p>';
     ?>
     
 
