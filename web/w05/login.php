@@ -53,8 +53,9 @@ if(isset($_POST['login'])){
 
     </div>
     <?php 
-  
-     echo "<p> hello</p>";
+     $userid = $db->prepare("select userid from public.user where email='anne@anne.com' and password='pass';");
+     $userid->execute();
+     echo "<p> " . " $userid " . "</p>";
     ?>
     
 
