@@ -12,6 +12,9 @@ body {
 h1 {
     font-size: 2rem;
 }
+.title {
+    display: flex;
+}
 label {
     font-size: 1.5rem;
 }
@@ -87,6 +90,6 @@ label {
     color: black;
     text-align: center;
     font-size:1em;
-  }
+}
 
    
