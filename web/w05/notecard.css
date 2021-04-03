@@ -54,6 +54,7 @@ label {
 .note-section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .notecard-container {
     perspective: 1000;
