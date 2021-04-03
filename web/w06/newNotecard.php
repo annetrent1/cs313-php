@@ -1,6 +1,6 @@
 <?php
-    // $stackid = $_POST['stackid'];
-    $stackid = '1';
+    $stackid = $_POST['stackid'];
+    // $stackid = '1';
     require "./dbConnect.php";
     $db = get_db();
 
@@ -32,7 +32,7 @@
 <body>
 
     <div class="title">
-        <h1>Create New Notecard</h1>
+        <h1>Create New Notecard <?php echo $stackid ?></h1>
     </div>
 
     <div class="section">
