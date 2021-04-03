@@ -13,6 +13,11 @@ $stackid = $_GET['stackid'];
 
     <div class="title">
         <h1>Notecards</h1>
+        <form method="post" action="./newNotecard.php" >
+                <input type="hidden" name="stackid" value="<?php echo $stackid?>"/>
+                <input class="add-button" type="submit" value="+"/>
+            </div>
+        </form>
     </div>
 
     <div class="note-section">
