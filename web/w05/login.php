@@ -60,7 +60,7 @@ if(isset($_POST['login'])){
     //  $statement = "SELECT userid FROM public.user WHERE email='anne@anne.com' AND password='pass'";
     //  $result = $db->query($statement);
     //  echo "<p> " . " $result " . "</p>";
-    $tryme = "anne@anne.com"
+    $tryme = "anne@anne.com";
     foreach ($db->query("SELECT userid FROM public.user WHERE email='" . $tryme . "';") as $row)
     {
         echo  '<p>' . $row["userid"] . '</p>';
