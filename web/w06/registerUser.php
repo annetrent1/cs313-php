@@ -32,7 +32,7 @@
         <h1>Register New User</h1>
     </div>
 
-    <!-- <div class="section">
+    <div class="section">
         <form method="post" action="" >
             <div class="input-container">
                 <div class="input-section">
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </form>
-    </div> -->
+    </div>
 
 
 </body>
