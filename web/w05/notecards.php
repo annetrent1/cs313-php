@@ -16,7 +16,11 @@ $stackid = $_GET['stackid'];
     </div>
 
     <div class="section">
-        <?php echo $stackid ?>
+        <?php foreach ($db->query("SELECT descriptionfront FROM public.notecard WHERE stackid='" . $stackid . "';") as $row)
+        {
+            echo '<p> ' . $row['descriptionfront'] . '</p>';
+        }
+        ?>
     </div>
 
 
