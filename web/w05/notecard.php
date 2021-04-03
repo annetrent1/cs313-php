@@ -16,7 +16,7 @@ $db = get_db();
     <div class="section">
         <?php foreach ($db->query("SELECT name FROM public.stack WHERE userid='1';") as $row)
         {
-        echo 'stacks: ' . $row['stack'];
+        echo 'stacks: ' . $row['name'];
         echo '<br/>';
         }
         ?>
