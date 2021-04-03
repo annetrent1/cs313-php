@@ -9,7 +9,7 @@
         WHERE userid=':userid'), 
         ':name');");
     $query->bindValue(':userid', $userid, PDO::PARAM_INT);
-    $query->bindValue(':name', $name, PDO::PARAM_INT);
+    $query->bindValue(':name', $name, PDO::PARAM_STR);
     $query->execute();
     echo "$name";
     echo "$userid";
