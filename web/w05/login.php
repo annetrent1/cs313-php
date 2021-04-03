@@ -53,7 +53,8 @@ if(isset($_POST['login'])){
 
     </div>
     <?php 
-     $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
+     $userid = $db->prepare("select userid from public.user where email='anne@anne.com' and password='pass';");
+     $userid->bindValue(':userid', $userid);
      $userid->execute();
      echo $userid;
     ?>
