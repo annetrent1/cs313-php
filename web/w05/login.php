@@ -18,7 +18,7 @@ if(isset($_POST['login'])){
         $count = $row['cntUser'];
 
         if($count > 0){
-            $_SESSION['email'] = $email;
+            // $_SESSION['email'] = $email;
             header('Location: ./notecard.php');
         }else{
             echo "Invalid username and password";
