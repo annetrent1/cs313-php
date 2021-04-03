@@ -1,6 +1,6 @@
 <?php require "./dbConnect.php";
 $db = get_db();
-$userid = session['userid'];
+$userid = $_SESSION['userid'];
 ?>
 <!DOCTYPE html>
 <html>
