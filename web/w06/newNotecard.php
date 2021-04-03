@@ -1,6 +1,6 @@
 <?php
-    // $stackid = $_POST['stackid'];
-    $stackid = 1;
+    $stackid = $_POST['stackid'];
+    // $stackid = 1;
     require "./dbConnect.php";
     $db = get_db();
     
