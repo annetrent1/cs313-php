@@ -7,15 +7,17 @@
     if(isset($_POST['submit'])) {
         $front = $_POST['front'];
         $back = $_POST['back'];
+        if ($front != "" && $back != ""){
     }
     
-    // $query = $db->prepare("INSERT INTO public.stack (userID, name)
-    //     VALUES ( ( SELECT userID FROM public.user 
-    //     WHERE userid=:userid), 
-    //     :name);");
-    // $query->bindValue(':userid', $userid, PDO::PARAM_INT);
-    // $query->bindValue(':name', $name, PDO::PARAM_STR);
-    // $query->execute();
+    $query = $db->prepare("INSERT INTO public.notecard (stackid, descriptionfront, descriptionback)
+        VALUES ( ( SELECT stackid FROM public.stack 
+        WHERE stackid=:stackid), 
+        :front, :back);");
+        $query->bindValue(':stackid', $stackid, PDO::PARAM_INT);
+        $query->bindValue(':front', $front, PDO::PARAM_STR);
+        $query->bindValue(':back', $back, PDO::PARAM_STR);
+        $query->execute();
     // header("Location: ./stacks.php");
     // die();
 ?>
