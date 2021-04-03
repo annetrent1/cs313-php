@@ -19,7 +19,7 @@ if(isset($_POST['login'])){
         if($sql_query > 0){
             foreach ($db->query("SELECT userid FROM public.user WHERE email='$email';") as $row)
             {
-                $userid =  '<p>' . $row["userid"] . '</p>';
+                $userid = $row["userid"];
             }
             // $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
             // $userid->execute();
@@ -60,7 +60,10 @@ if(isset($_POST['login'])){
     //  $statement = "SELECT userid FROM public.user WHERE email='anne@anne.com' AND password='pass'";
     //  $result = $db->query($statement);
     //  echo "<p> " . " $result " . "</p>";
-     
+    foreach ($db->query("SELECT userid FROM public.user WHERE email='anne@anne.com';") as $row)
+    {
+        echo  '<p>' . $row["userid"] . '</p>';
+    }
     ?>
     
 
