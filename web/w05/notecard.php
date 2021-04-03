@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require "./dbConnect.php";
 $db = get_db();
 if(!isset($_COOKIE[$cookie_name])) {
