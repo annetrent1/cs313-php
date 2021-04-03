@@ -36,12 +36,20 @@
         <form method="post" action="" >
             <div class="input-container">
                 <div class="input-section">
-                    <label for="front">Front</label>
-                    <input class="input" type="text" id="front" name="front"/>
+                    <label for="firstname">First Name: </label>
+                    <input class="input" type="text" id="firstname" name="firstname"/>
                 </div>
                 <div class="input-section">
-                    <label for="back">Back</label>
-                    <input class="input" type="text" id="back" name="back"/>
+                    <label for="lastname">Last Name: </label>
+                    <input class="input" type="text" id="lastname" name="lastname"/>
+                </div>
+                <div class="input-section">
+                    <label for="email">Email: </label>
+                    <input class="input" type="text" id="email" name="email"/>
+                </div>
+                <div class="input-section">
+                    <label for="password">Password: </label>
+                    <input class="input" type="text" id="password" name="password"/>
                 </div>
                 <div class="button-section">
                     <input class="add-button" type="submit" name="submit" id="submit" value="Submit"/>
