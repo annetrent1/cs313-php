@@ -1,6 +1,5 @@
 <?php
-    $stackid = 1;
-    // $_POST['stackid'];
+    $stackid = $_POST['stackid'];
     // session_start();
     // $_SESSION['stackid'] = $stackid;
     // $id = '1';
