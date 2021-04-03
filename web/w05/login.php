@@ -17,13 +17,13 @@ if(isset($_POST['login'])){
 
         
         if($sql_query > 0){
-            // foreach ($db->query("SELECT userid FROM public.user WHERE email='$email';") as $row)
-            // {
-            //     $userid = $row["userid"];
-            // }
+            foreach ($db->query("SELECT userid FROM public.user WHERE email='" . $email . "';") as $row)
+            {
+                $userid = $row["userid"];
+            }
             // $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
             // $userid->execute();
-            // $_SESSION["userid"] = $userid; 
+            $_SESSION["userid"] = $userid; 
             
             // setcookie('userid', $userid, time() + (86400), "/");
             header('Location: ./stacks.php');
