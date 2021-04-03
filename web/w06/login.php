@@ -24,12 +24,17 @@ if(isset($_POST['login'])){
             session_start();
             $_SESSION["userid"] = $userid; 
             header('Location: ./stacks.php');
+            die();
         }else{
             echo "Invalid username and password";
         }
 
     }
 
+}
+if(isset($_POST['login'])){
+    header('Location: ./RegisterUser.php');
+    die();
 }
 ?>
 <!DOCTYPE html>
@@ -55,6 +60,7 @@ if(isset($_POST['login'])){
             </div>
             <div class="button-section">
                 <input class="login-button" type="submit" value="Login" name="login" id="login"/>
+                <input class="login-button" type="submit" value="Register" name="register" id="register"/>
             </div>
         </form>
 
