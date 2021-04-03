@@ -14,15 +14,12 @@ $userid = $_SESSION['userid'];
 
     <div class="title">
         <h1>Stacks </h1>
-        <?php 
-            echo "<h2>" . $userid .  " </h2>";
-        ?>
     </div>
 
     <div class="section">
         <?php foreach ($db->query("SELECT name, stackid FROM public.stack WHERE userid='" . $userid . "';") as $row)
         {
-            echo '<a href="./notecards.php?stackid=' . $row['stackid'] . '">' .  $row['name'] . '</a>';
+            echo '<p class="item"><a href="./notecards.php?stackid=' . $row['stackid'] . '">' .  $row['name'] . '</a> </p>';
         }
         ?>
     </div>
