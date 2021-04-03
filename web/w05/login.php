@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$_SESSION["userid"] = '0';
+$_SESSION['userid'] = '0';
 require "./dbConnect.php";
 $db = get_db();
 
@@ -21,7 +21,7 @@ if(isset($_POST['login'])){
             $userid = "";
             foreach ($db->query("SELECT userid FROM public.user WHERE email='" . $email . "';") as $row)
             {
-                $userid = $row["userid"];
+                $userid = $row['userid'];
             }
             // $userid = $db->prepare("select userid from public.user where email='$email' and password='$password';");
             // $userid->execute();
