@@ -1,5 +1,7 @@
 <?php
     $stackid = $_POST['stackid'];
+    session_start();
+    $_SESSION['stackid'] = $stackid;
     // $stackid = '1';
     require "./dbConnect.php";
     $db = get_db();
@@ -12,13 +14,13 @@
             VALUES ( ( SELECT stackid FROM public.stack 
             WHERE stackid=:stackid), 
             :front, :back);");
-            $query->bindValue(':stackid', $stackid, PDO::PARAM_INT);
-            $query->bindValue(':front', $front, PDO::PARAM_STR);
-            $query->bindValue(':back', $back, PDO::PARAM_STR);
-            $query->execute();
-            $location = "./notecards.php?stackid=$stackid";
-            header("Location: $location");
-            die();
+            // $query->bindValue(':stackid', $stackid, PDO::PARAM_INT);
+            // $query->bindValue(':front', $front, PDO::PARAM_STR);
+            // $query->bindValue(':back', $back, PDO::PARAM_STR);
+            // $query->execute();
+            // $location = "./notecards.php?stackid=$stackid";
+            // header("Location: $location");
+            // die();
         }
     }
     
