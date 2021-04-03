@@ -58,7 +58,7 @@ if(isset($_POST['login'])){
     //  echo "<p> " . " $result " . "</p>";
      foreach ($db->query("SELECT userid FROM public.user WHERE email='anne@anne.com';") as $row)
         {
-            echo '<p>' . $row['stackid'] . '</p>';
+            echo '<p>' . $row['userid'] . '</p>';
         }
     ?>
     
