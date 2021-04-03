@@ -10,9 +10,10 @@
         if ($firstname != "" && $lastname != "" && $email != "" && $password != ""){
             $query = $db->prepare("INSERT INTO public.user (firstname, lastname, email, password)
             VALUES (:firstname, :lastname, :email, :password);");
-        //     $query->bindValue(':stackid', $id, PDO::PARAM_INT);
-        //     $query->bindValue(':front', $front, PDO::PARAM_STR);
-        //     $query->bindValue(':back', $back, PDO::PARAM_STR);
+            $query->bindValue(':firstname', $firstname, PDO::PARAM_INT);
+            $query->bindValue(':lastname', $lastname, PDO::PARAM_STR);
+            $query->bindValue(':email', $email, PDO::PARAM_STR);
+            $query->bindValue(':password', $password, PDO::PARAM_STR);
         //     $query->execute();
         //     $location = "./notecards.php?stackid=$id";
         //     header("Location: $location");
