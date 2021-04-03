@@ -53,8 +53,8 @@ if(isset($_POST['login'])){
 
     </div>
     <?php 
-     $statement = $db->query("select userid from public.user where email='anne@anne.com' and password='pass';");
-     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+     $statement = "select userid from public.user where email='anne@anne.com' and password='pass';";
+     $result = $db->query($statement);
      echo "<p> " . " $result " . "</p>";
     ?>
     
