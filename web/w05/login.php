@@ -10,7 +10,8 @@ if(isset($_POST['login'])){
 
     if ($email != "" && $password != ""){
 
-        $sql_query = "select count(*) as cntUser from public.users where email='".$email."' and password='".$password."'";
+        $sql_query = $db->prepare("select count(*) as cntUser from public.user where email='$email' and password='$password';");
+        $sql_query->execute();
         $result = mysqli_query($con,$sql_query);
         $row = mysqli_fetch_array($result);
 
@@ -41,25 +42,25 @@ if(isset($_POST['login'])){
     <div class="section">
         
         <?php 
-            $user = $db->prepare("SELECT firstname, lastname FROM public.user");
-            $user->execute();
+            // $user = $db->prepare("SELECT firstname, lastname FROM public.user");
+            // $user->execute();
             
 
-            while ($row = $user->fetch(PDO::FETCH_ASSOC))
-            {
+            // while ($row = $user->fetch(PDO::FETCH_ASSOC))
+            // {
                 
-                $fName = $row['firstname'];
-                $lName = $row['lastname'];
+            //     $fName = $row['firstname'];
+            //     $lName = $row['lastname'];
 
-                echo "<p class='user'>$fName $lName<p>";
-            }
+            //     echo "<p class='user'>$fName $lName<p>";
+            // }
         ?>
-        <form action="" method="post">
+        <form method="post" action="" >
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" value="anne@anne.com"><br><br>
+        <input type="text" id="email" name="email" value="anne@anne.com"/><br><br>
         <label for="password">Password:</label>
-        <input type="text" id="password" name="password" value="pass">
-        <input type="submit" value="Login" name="login" id="login">
+        <input type="text" id="password" name="password" value="pass"/>
+        <input type="submit" value="Login" name="login" id="login"/>
         </form>
 
 
