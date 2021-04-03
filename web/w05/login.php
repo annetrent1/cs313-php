@@ -5,19 +5,16 @@ $db = get_db();
 
 if(isset($_POST['login'])){
 
-    $email = mysqli_real_escape_string($db,$_POST['email']);
-    $password = mysqli_real_escape_string($db,$_POST['password']);
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
     if ($email != "" && $password != ""){
 
         $sql_query = $db->prepare("select count(*) as cntUser from public.user where email='$email' and password='$password';");
         $sql_query->execute();
-        $result = mysqli_query($db,$sql_query);
-        $row = mysqli_fetch_array($result);
+        
 
-        $count = $row['cntUser'];
-
-        if($count > 0){
+        if($sql_query > 0){
             $_SESSION['email'] = $email;
             header('Location: ./notecard.php');
         }else{
