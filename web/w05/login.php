@@ -24,12 +24,12 @@ if(isset($_POST['login'])){
         
         if($sql_query > 0){
             $userid = "";
-            // foreach ($db->query("SELECT userid FROM public.user WHERE email='" . $email . "';") as $row)
-            // {
-            //     $userid = $row['userid'];
-            // }
-            $userid = $db->prepare("SELECT userid FROM public.user WHERE email='" . $email . "';");
-            $userid->execute();
+            foreach ($db->query("SELECT userid FROM public.user WHERE email='" . $email . "';") as $row)
+            {
+                $userid = $row['userid'];
+            }
+            // $userid = $db->prepare("SELECT userid FROM public.user WHERE email='" . $email . "';");
+            // $userid->execute();
             session_start();
             $_SESSION["userid"] = $userid; 
             
@@ -68,14 +68,14 @@ if(isset($_POST['login'])){
     //  $statement = "SELECT userid FROM public.user WHERE email='anne@anne.com' AND password='pass'";
     //  $result = $db->query($statement);
     //  echo "<p> " . " $result " . "</p>";
-    // $tryme = "anne@anne.com";
-    // foreach ($db->query("SELECT userid FROM public.user WHERE email='" . $tryme . "';") as $row)
-    // {
-    //     echo  '<p>' . $row["userid"] . '</p>';
-    // }
-    $tryme = $db->prepare("SELECT userid FROM public.user WHERE email='" . $email . "';");
-    $tryme->execute();
-    echo  '<p>' . $userid . '</p>';
+    $tryme = "anne@anne.com";
+    foreach ($db->query("SELECT userid FROM public.user WHERE email='" . $tryme . "';") as $row)
+    {
+        echo  '<p>' . $row["userid"] . '</p>';
+    }
+    // $tryme = $db->prepare("SELECT userid FROM public.user WHERE email='" . $email . "';");
+    // $tryme->execute();
+    // echo  '<p>' . $userid . '</p>';
     ?>
     
 
