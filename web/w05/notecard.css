@@ -46,3 +46,7 @@ label {
     margin: 2.5px;
     font-size: 1.5rem;
 }
+.add-button {
+    font-size: 1.5rem;
+    padding: 2px; 
+}
