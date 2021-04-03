@@ -15,7 +15,7 @@
             VALUES ( ( SELECT stackid FROM public.stack 
             WHERE stackid=:id), 
             :front, :back);");
-            $query->bindValue(':stackid', $id, PDO::PARAM_INT);
+            $query->bindValue(':id', $id, PDO::PARAM_INT);
             $query->bindValue(':front', $front, PDO::PARAM_STR);
             $query->bindValue(':back', $back, PDO::PARAM_STR);
             $query->execute();
