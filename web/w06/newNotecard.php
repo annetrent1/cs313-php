@@ -1,8 +1,5 @@
 <?php
     $stackid = $_POST['stackid'];
-    session_start();
-    $_SESSION['stackid'] = $stackid;
-    $stackid = $_SESSION['stackid'];
 
     require "./dbConnect.php";
     $db = get_db();
@@ -10,12 +7,13 @@
     if(isset($_POST['submit'])) {
         $front = $_POST['front'];
         $back = $_POST['back'];
+        $id = $_POST['stackid'];
         if ($front != "" && $back != ""){
             $query = $db->prepare("INSERT INTO public.notecard (stackid, descriptionfront, descriptionback)
             VALUES ( ( SELECT stackid FROM public.stack 
             WHERE stackid=:stackid), 
             :front, :back);");
-            $query->bindValue(':stackid', $stackid, PDO::PARAM_INT);
+            $query->bindValue(':stackid', $id, PDO::PARAM_INT);
             $query->bindValue(':front', $front, PDO::PARAM_STR);
             $query->bindValue(':back', $back, PDO::PARAM_STR);
             $query->execute();
@@ -42,6 +40,7 @@
         <form method="post" action="" >
             <div class="input-container">
                 <div class="input-section">
+                <input type="hidden" name="stackid" value="<?php echo $stackid?>"/>
                     <label for="front">Front</label>
                     <input class="input" type="text" id="front" name="front"/>
                 </div>
