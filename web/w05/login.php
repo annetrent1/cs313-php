@@ -53,13 +53,13 @@ if(isset($_POST['login'])){
 
     </div>
     <?php 
-     $statement = "SELECT userid FROM public.user WHERE email='anne@anne.com' AND password='pass'";
-     $result = $db->query($statement);
-     echo "<p> " . " $result " . "</p>";
-    //  foreach ($db->query("SELECT name, stackid FROM public.stack WHERE userid='1';") as $row)
-    //     {
-    //         echo '<a href="./notecards.php?stackid=' . $row['stackid'] . '">' .  $row['name'] . '</a>';
-    //     }
+    //  $statement = "SELECT userid FROM public.user WHERE email='anne@anne.com' AND password='pass'";
+    //  $result = $db->query($statement);
+    //  echo "<p> " . " $result " . "</p>";
+     foreach ($db->query("SELECT userid FROM public.user WHERE email='anne.anne';") as $row)
+        {
+            echo '<p>' . $row['userid'] . '</p>';
+        }
     ?>
     
 
