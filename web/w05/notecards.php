@@ -1,7 +1,7 @@
 <?php 
 require "./dbConnect.php";
 $db = get_db();
-
+$stackid = $_GET['stackid'];
 
 ?>
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ $db = get_db();
     </div>
 
     <div class="section">
-        
+        <?php echo $stackid ?>
     </div>
 
 
