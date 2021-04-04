@@ -1,6 +1,6 @@
 <?php
-    $stackid = $_GET['stackid'];
-    $name = $_GET['name'];
+    $stackid = htmlspecialchars($_GET['stackid']);
+    $name = htmlspecialchars($_GET['name']);
     require "./dbConnect.php";
     $db = get_db();
 

@@ -1,7 +1,7 @@
 <?php
-    $stackid = $_GET['stackid'];
-    $front = $_GET['descriptionfront'];
-    $notecardid = $_GET['notecardid'];
+    $stackid = htmlspecialchars($_GET['stackid']);
+    $front = htmlspecialchars($_GET['descriptionfront']);
+    $notecardid = htmlspecialchars($_GET['notecardid']);
 
     require "./dbConnect.php";
     $db = get_db();

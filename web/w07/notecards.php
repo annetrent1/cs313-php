@@ -1,7 +1,7 @@
 <?php 
 require "./dbConnect.php";
 $db = get_db();
-$stackid = $_GET['stackid'];
+$stackid = htmlspecialchars($_GET['stackid']);
 
 ?>
 <!DOCTYPE html>

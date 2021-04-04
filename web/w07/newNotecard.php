@@ -1,5 +1,5 @@
 <?php
-    $stackid = $_POST['stackid'];
+    $stackid = htmlspecialchars($_POST['stackid']);
 
     require "./dbConnect.php";
     $db = get_db();

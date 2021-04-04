@@ -1,6 +1,6 @@
 <?php
-    $name = $_POST['addstack'];
-    $userid = $_POST['userid'];
+    $name = htmlspecialchars($_POST['addstack']);
+    $userid = htmlspecialchars($_POST['userid']);
     require "./dbConnect.php";
     $db = get_db();
     
