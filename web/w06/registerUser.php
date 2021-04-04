@@ -57,7 +57,7 @@
                 </div>
                 <div class="button-section">
                     <input class="add-button" type="submit" name="submit" id="submit" value="Submit"/>
-                    <input class="add-button" type="submit" name="cancel" id="cancel" value="Cancel"/>
+                    <!-- <input class="add-button" type="submit" name="cancel" id="cancel" value="Cancel"/> -->
                 </div>
             </div>
         </form>
