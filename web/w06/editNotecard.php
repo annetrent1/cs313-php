@@ -5,6 +5,13 @@
     require "./dbConnect.php";
     $db = get_db();
 
+    if ($front != "") {
+        $query = $db->prepare("SELECT backdescription FROM public.notecard 
+            WHERE stackid=:stackid;");
+        $query->bindValue(':stackid', $id, PDO::PARAM_INT);
+        $back = $query->execute();
+    }
+
     // if(isset($_POST['submit'])) {
     //     $front = $_POST['front'];
     //     $back = $_POST['back'];
