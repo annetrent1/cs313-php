@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <?php include './logout.php'?>
+    <a href='./logout.php'>Logout</a>
 
     <div class="title">
         <h1>Stacks </h1>
