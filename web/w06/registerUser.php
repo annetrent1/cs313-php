@@ -15,15 +15,16 @@
             $query->bindValue(':email', $email, PDO::PARAM_STR);
             $query->bindValue(':password', $password, PDO::PARAM_STR);
             $query->execute();
-            
+            // TODO:: CHECK
             $location = "./notecards.php?stackid=$id";
             header("Location: $location");
             die();
         } 
     }
-    // if (isset($_POST['cancel'])) {
-    //     header('Location: ./login.php');
-    // }
+    if (isset($_POST['cancel'])) {
+        header('Location: ./login.php');
+        die();
+    }
     
   
 ?>
@@ -59,7 +60,7 @@
                 </div>
                 <div class="button-section">
                     <input class="add-button" type="submit" name="submit" id="submit" value="Submit"/>
-                    <!-- <input class="add-button" type="submit" name="cancel" id="cancel" value="Cancel"/> -->
+                    <input class="add-button" type="submit" name="cancel" id="cancel" value="Cancel"/>
                 </div>
             </div>
         </form>
