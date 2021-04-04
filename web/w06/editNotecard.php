@@ -10,10 +10,13 @@
         WHERE descriptionfront='$front';") as $row)
         {
             session_start();
-            $_SESSION['front'] = $row['descriptionfront'];
-            $_SESSION['back'] = $row['descriptionback'];
+            $frontTemp = $row['descriptionfront'];
+            $backTemp = $row['descriptionback'];
             
         }
+            session_start();
+            $_SESSION['front'] = frontTemp;
+            $_SESSION['back'] = backTemp;
         
         $query->bindValue(':stackid', $id, PDO::PARAM_INT);
         $back = $query->execute();
@@ -49,7 +52,7 @@
     <div class="logout-button"><a href='./logout.php'>Logout</a></div>
 
     <div class="title">
-        <h1>Edit Notecard</h1>
+        <h1>Edit Notecard <?php echo $front ?></h1>
     </div>
 
     <div class="section">
