@@ -11,9 +11,11 @@
 </head>
 <body>
     <div class="logout-button"><a href='./logout.php'>Logout</a></div>
+    <div class="title">
+        <h1>Edit name for <?php echo $name; ?> stack</h1>
+    </div>
     <form method="post" action="">
             <div class="item">
-                <label for="edit"><?php echo $name; ?><?php echo $stackid; ?></label>
                 <input class="input" type="text" id="edit" name="edit"/>
                 <input class="add-button" type="submit" value="edit" />
             </div>
