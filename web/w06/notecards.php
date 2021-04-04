@@ -21,13 +21,13 @@ $stackid = $_GET['stackid'];
     </div>
 
     <div class="note-section">
-        <?php foreach ($db->query("SELECT descriptionfront, descriptionback FROM public.notecard WHERE stackid='" . $stackid . "';") as $row)
+        <?php foreach ($db->query("SELECT notecardid, descriptionfront, descriptionback FROM public.notecard WHERE stackid='" . $stackid . "';") as $row)
         {
             echo '<div class="notecard-container">';
             echo '<div class="notecard">';
             echo '<div class="front face"> ' . $row['descriptionfront'] . '</div>';
             echo '<div class="back face"> ' . $row['descriptionback'] . '';
-            echo '<a href="./editNotecard.php?stackid=' . $stackid . '&descriptionfront=' . $row['descriptionfront'] . '"> Edit </a>';
+            echo '<a href="./editNotecard.php?stackid=' . $stackid . '&descriptionfront=' . $row['descriptionfront'] . '&notecardid=' . $row['notecardid'] . '"> Edit </a>';
             echo '</div>';
             echo '</div>';
             echo '</div>';

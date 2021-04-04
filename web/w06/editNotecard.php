@@ -1,6 +1,7 @@
 <?php
     $stackid = $_GET['stackid'];
     $front = $_GET['descriptionfront'];
+    $notecardid = $_GET['notecardid'];
 
     require "./dbConnect.php";
     $db = get_db();
@@ -9,27 +10,19 @@
         foreach ($db->query("SELECT descriptionfront, descriptionback FROM public.notecard 
         WHERE descriptionfront='$front';") as $row)
         {
-            // session_start();
-            // $frontTemp = $row['descriptionfront'];
             $back = $row['descriptionback'];
-            
         }
-        //     session_start();
-        //     $_SESSION['front'] = $frontTemp;
-        //     $_SESSION['back'] = $backTemp;
-        
-        // $query->bindValue(':stackid', $id, PDO::PARAM_INT);
-        // $back = $query->execute();
     }
 
     if(isset($_POST['submit'])) {
         $front = $_POST['front'];
         $back = $_POST['back'];
         $id = $_POST['stackid'];
+        $notecardid = $_POST['notecardid'];
         if ($front != "" && $back != ""){
             $query = $db->prepare("UPDATE public.notecard SET descriptionfront=:front, descriptionback=:back
-            WHERE stackid=:stackid;");
-            $query->bindValue(':stackid', $id, PDO::PARAM_INT);
+            WHERE notcardid=:notecardid;");
+            $query->bindValue(':notecardid', $notecardid, PDO::PARAM_INT);
             $query->bindValue(':front', $front, PDO::PARAM_STR);
             $query->bindValue(':back', $back, PDO::PARAM_STR);
             $query->execute();
@@ -58,6 +51,7 @@
             <div class="input-container">
                 <div class="input-section">
                     <input type="hidden" name="stackid" value="<?php echo $stackid ?>"/>
+                    <input type="hidden" name="stackid" value="<?php echo $notecardid ?>"/>
                     <label for="front">Front</label>
                     <input class="input" type="text" name="front" value="<?php echo $front ?>"/>
                 </div>
