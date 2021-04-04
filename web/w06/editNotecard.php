@@ -8,7 +8,7 @@
 
     if ($front != "") {
         foreach ($db->query("SELECT descriptionfront, descriptionback FROM public.notecard 
-        WHERE descriptionfront='$front';") as $row)
+        WHERE notecardid='$notecardid';") as $row)
         {
             $back = $row['descriptionback'];
         }
