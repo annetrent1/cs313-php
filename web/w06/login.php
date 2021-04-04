@@ -10,7 +10,7 @@ if(isset($_POST['login'])){
         $userid = $row['userid'];
     }
 
-    if ($email != "" && $password != ""){
+    if ($email != "" && $password != "" && $userid!=""){
 
         $sql_query = $db->prepare("select count(*) as cntUser from public.user where email='" . $email . "' and password='" . $password . "';");
         $sql_query->execute();
