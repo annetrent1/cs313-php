@@ -5,22 +5,22 @@
     require "./dbConnect.php";
     $db = get_db();
 
-    // if ($front != "") {
-    //     foreach ($db->query("SELECT descriptionfront, descriptionback FROM public.notecard 
-    //     WHERE descriptionfront='$front';") as $row)
-    //     {
-    //         session_start();
-    //         $frontTemp = $row['descriptionfront'];
-    //         $backTemp = $row['descriptionback'];
+    if ($front != "") {
+        foreach ($db->query("SELECT descriptionfront, descriptionback FROM public.notecard 
+        WHERE descriptionfront='$front';") as $row)
+        {
+            // session_start();
+            // $frontTemp = $row['descriptionfront'];
+            $back = $row['descriptionback'];
             
-    //     }
-    //         session_start();
-    //         $_SESSION['front'] = $frontTemp;
-    //         $_SESSION['back'] = $backTemp;
+        }
+        //     session_start();
+        //     $_SESSION['front'] = $frontTemp;
+        //     $_SESSION['back'] = $backTemp;
         
-    //     $query->bindValue(':stackid', $id, PDO::PARAM_INT);
-    //     $back = $query->execute();
-    // }
+        // $query->bindValue(':stackid', $id, PDO::PARAM_INT);
+        // $back = $query->execute();
+    }
 
     // if(isset($_POST['submit'])) {
     //     $front = $_POST['front'];
@@ -65,7 +65,7 @@
                 </div>
                 <div class="input-section">
                     <label for="back">Back</label>
-                    <input class="input" type="text" name="back"/>
+                    <input class="input" type="text" name="back" value="<?php echo $back ?>/>
                 </div>
                 <div class="button-section">
                     <input class="add-button" type="submit" name="submit" id="submit" value="Submit"/>
