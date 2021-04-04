@@ -18,8 +18,8 @@
         //     $location = "./notecards.php?stackid=$id";
         //     header("Location: $location");
         //     die();
-        }
-        
+    } if (isset($_POST['cancel'])) {
+        header("Location: ./login.php");
     }
     
   
@@ -56,6 +56,7 @@
                 </div>
                 <div class="button-section">
                     <input class="add-button" type="submit" name="submit" id="submit" value="Submit"/>
+                    <input class="add-button" type="submit" name="cancel" id="cancel" value="Cancel"/>
                 </div>
             </div>
         </form>
