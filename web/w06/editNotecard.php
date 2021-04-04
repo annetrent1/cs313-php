@@ -51,7 +51,7 @@
             <div class="input-container">
                 <div class="input-section">
                     <input type="hidden" name="stackid" value="<?php echo $stackid ?>"/>
-                    <input type="hidden" name="stackid" value="<?php echo $notecardid ?>"/>
+                    <input type="hidden" name="notecardid" value="<?php echo $notecardid ?>"/>
                     <label for="front">Front</label>
                     <input class="input" type="text" name="front" value="<?php echo $front ?>"/>
                 </div>
