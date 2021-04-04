@@ -65,7 +65,7 @@
                 </div>
                 <div class="input-section">
                     <label for="back">Back</label>
-                    <input class="input" type="text" name="back" value="<?php echo $back ?>/>
+                    <input class="input" type="text" name="back" value="<?php echo $back ?>"/>
                 </div>
                 <div class="button-section">
                     <input class="add-button" type="submit" name="submit" id="submit" value="Submit"/>
