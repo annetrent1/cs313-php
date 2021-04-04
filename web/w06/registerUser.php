@@ -15,9 +15,10 @@
             $query->bindValue(':email', $email, PDO::PARAM_STR);
             $query->bindValue(':password', $password, PDO::PARAM_STR);
             $query->execute();
-        //     $location = "./notecards.php?stackid=$id";
-        //     header("Location: $location");
-        //     die();
+            
+            $location = "./notecards.php?stackid=$id";
+            header("Location: $location");
+            die();
         } 
     }
     // if (isset($_POST['cancel'])) {
