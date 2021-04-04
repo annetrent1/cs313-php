@@ -12,7 +12,7 @@
             WHERE stackid=:stackid;");
             $query->bindValue(':name', $name, PDO::PARAM_STR);
             $query->bindValue(':stackid', $id, PDO::PARAM_INT);
-            // $query->execute();
+            $query->execute();
             // $location = "./notecards.php?stackid=$id";
             // header("Location: $location");
             // die();
