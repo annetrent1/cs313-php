@@ -34,7 +34,7 @@ if(isset($_POST['login'])){
 }
 if(isset($_POST['register'])){
     header('Location: ./registerUser.php');
-    // die();
+    die();
 }
 ?>
 <!DOCTYPE html>
