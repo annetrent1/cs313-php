@@ -24,7 +24,7 @@
         {
             echo '<p class="item note-item">';
             echo '<a href="./notecards.php?stackid=' . $row['stackid'] . '">' .  $row['name'] . '</a>';
-            echo '<a href="./editStack.php?stackid="' . $row['stackid'] . '"?name="' . $row['name'] . '""> Edit </a>';
+            echo '<a href="./editStack.php?stackid=' . $row['stackid'] . '&name=' . $row['name'] . '"> Edit </a>';
             echo '</p>';
         }
         ?>
