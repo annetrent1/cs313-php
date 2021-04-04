@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="./notecard.css">
 </head>
 <body>
+    <div class="logout-button"><a href='./logout.php'>Logout</a></div>
 
     <div class="title">
         <h1>Create New Notecard <?php echo $stackid ?></h1>

@@ -10,6 +10,7 @@ $stackid = $_GET['stackid'];
     <link rel="stylesheet" href="./notecard.css">
 </head>
 <body>
+    <div class="logout-button"><a href='./logout.php'>Logout</a></div>
 
     <div class="title">
         <h1>Notecards</h1>
