@@ -15,8 +15,8 @@
             
         }
             session_start();
-            $_SESSION['front'] = frontTemp;
-            $_SESSION['back'] = backTemp;
+            $_SESSION['front'] = $frontTemp;
+            $_SESSION['back'] = $backTemp;
         
         $query->bindValue(':stackid', $id, PDO::PARAM_INT);
         $back = $query->execute();
