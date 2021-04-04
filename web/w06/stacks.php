@@ -22,7 +22,9 @@
     <div class="section">
         <?php foreach ($db->query("SELECT name, stackid FROM public.stack WHERE userid='" . $userid . "';") as $row)
         {
-            echo '<p class="item"><a href="./notecards.php?stackid=' . $row['stackid'] . '">' .  $row['name'] . '</a> </p>';
+            echo '<p class="item">'
+            echo '<a href="./notecards.php?stackid=' . $row['stackid'] . '">' .  $row['name'] . '</a>'
+            echo '</p>';
         }
         ?>
         <form method="post" action="./insertStack.php">
