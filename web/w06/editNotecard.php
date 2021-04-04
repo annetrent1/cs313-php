@@ -49,13 +49,13 @@
         <form method="post" action="" >
             <div class="input-container">
                 <div class="input-section">
-                <input type="hidden" name="stackid" value="<?php echo $stackid?>"/>
+                    <input type="hidden" name="stackid" value="<?php echo $stackid?>"/>
                     <label for="front">Front</label>
                     <input class="input" type="text" name="front" value="<?php echo $front ?>"/>
                 </div>
                 <div class="input-section">
                     <label for="back">Back</label>
-                    <input class="input" type="text" id="back" name="back"/>
+                    <input class="input" type="text" name="back" value="<?php echo $back ?>"/>
                 </div>
                 <div class="button-section">
                     <input class="add-button" type="submit" name="submit" id="submit" value="Submit"/>
