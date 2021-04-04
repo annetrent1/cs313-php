@@ -1,6 +1,6 @@
 <?php
-    $stackid = $_POST['stackid'];
-    $front = $_POST['descriptionfront'];
+    $stackid = $_GET['stackid'];
+    $front = $_GET['descriptionfront'];
 
     require "./dbConnect.php";
     $db = get_db();
@@ -59,7 +59,7 @@
         <form method="post" action="" >
             <div class="input-container">
                 <div class="input-section">
-                    <input type="hidden" name="stackid" value="<?php echo $stackid?>"/>
+                    <input type="hidden" name="stackid" value="<?php echo $stackid ?>"/>
                     <label for="front">Front</label>
                     <input class="input" type="text" name="front" value="<?php echo $_SESSION['front'] ?>"/>
                 </div>
