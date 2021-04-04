@@ -5,7 +5,7 @@ $db = get_db();
 if(isset($_POST['login'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
-    foreach ($db->query("SELECT userid FROM public.user WHERE email='" . $email . "';") as $row)
+    foreach ($db->query("SELECT userid FROM public.user WHERE email='$email';") as $row)
     {
         $userid = $row['userid'];
     }
