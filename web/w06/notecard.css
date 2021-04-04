@@ -96,6 +96,9 @@ label {
 .note-item {
     border: 1px solid hsla(184, 72%, 50%, .8);
     background-color:  hsla(184, 72%, 50%, .2);
+    width: 30%;
+    max-width: 200px;
+    margin: 5px auto;
 }
 .add-button {
     font-size: 1.4rem;
