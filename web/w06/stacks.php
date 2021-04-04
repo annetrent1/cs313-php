@@ -30,9 +30,7 @@
                 <label for="addstack">Add New Stack</label>
                 <input type="hidden" name="userid" value="<?php echo $userid?>" />
                 <input class="input" type="text" id="addstack" name="addstack" />
-                <div class="button-section">
-                    <input class="add-button" type="submit" value="+" />
-                </div>
+                <input class="add-button" type="submit" value="+" />
             </div>
         </form>
     </div>
