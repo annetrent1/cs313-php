@@ -6,8 +6,15 @@
     $db = get_db();
 
     if ($front != "") {
-        $query = $db->prepare("SELECT backdescription FROM public.notecard 
-            WHERE stackid=:stackid;");
+        foreach ($db->query("SELECT descriptionfront, descriptionback FROM public.notecard 
+        WHERE descriptionfront='$front';") as $row)
+        {
+            session_start();
+            $_SESSION['front'] = $row['descriptionfront'];
+            $_SESSION['back'] = $row['descriptionback'];
+            
+        }
+        
         $query->bindValue(':stackid', $id, PDO::PARAM_INT);
         $back = $query->execute();
     }
@@ -51,11 +58,11 @@
                 <div class="input-section">
                     <input type="hidden" name="stackid" value="<?php echo $stackid?>"/>
                     <label for="front">Front</label>
-                    <input class="input" type="text" name="front" value="<?php echo $front ?>"/>
+                    <input class="input" type="text" name="front" value="<?php echo $_SESSION['front'] ?>"/>
                 </div>
                 <div class="input-section">
                     <label for="back">Back</label>
-                    <input class="input" type="text" name="back" value="<?php echo $back ?>"/>
+                    <input class="input" type="text" name="back" value="<?php echo $_SESSION['back'] ?>"/>
                 </div>
                 <div class="button-section">
                     <input class="add-button" type="submit" name="submit" id="submit" value="Submit"/>
