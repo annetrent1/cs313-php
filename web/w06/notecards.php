@@ -27,8 +27,8 @@ $stackid = $_GET['stackid'];
             echo '<div class="notecard">';
             echo '<div class="front face"> ' . $row['descriptionfront'] . '</div>';
             echo '<div class="back face"> ' . $row['descriptionback'] . '';
-            echo '<a href="./editNotecard.php?stackid=' . $stackid . '&descriptionfront=' . $row['descriptionfront'] . '&notecardid=' . $row['notecardid'] . '"> Edit </a>';
-            echo '</div>';
+            echo '<div><a href="./editNotecard.php?stackid=' . $stackid . '&descriptionfront=' . $row['descriptionfront'] . '&notecardid=' . $row['notecardid'] . '"> Edit </a>';
+            echo '</div></div>';
             echo '</div>';
             echo '</div>';
         }
