@@ -93,6 +93,10 @@ label {
     margin: 2.5px;
     font-size: 1.5rem;
 }
+.item-note {
+    border: 1px solid hsla(184, 72%, 50%, .8);
+    background-color:  hsla(184, 72%, 50%, .2);
+}
 .add-button {
     font-size: 1.4rem;
     padding: 1px; 
