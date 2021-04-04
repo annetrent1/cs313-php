@@ -4,9 +4,7 @@
 
     if(isset($_POST['logout'])) {
             echo "HELLO";
-        }
     }
-    
   
 ?>
 <!DOCTYPE html>
