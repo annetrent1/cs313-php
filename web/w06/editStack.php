@@ -2,7 +2,8 @@
    require "./dbConnect.php";
    $db = get_db();
    $stackid = $_GET['stackid'];
-   $name = $_GET['name'];
+   $name = "DNA";
+//    $_GET['name'];
 ?>
 <!DOCTYPE html>
 <html>
