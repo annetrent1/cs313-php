@@ -59,9 +59,12 @@ label {
 }
 .edit-button {
     border: 1px solid hsla(184, 92%, 50%, .6);
+    background-color:  hsla(184, 92%, 50%, .2);
     font-size: 1rem;
     padding: 2px;
-    margin: 0 auto 0 0;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
 }
 .logout-button {
     border: 1px solid hsla(184, 72%, 50%, .8);
