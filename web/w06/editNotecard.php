@@ -21,14 +21,14 @@
         $notecardid = $_POST['notecardid'];
         if ($front != "" && $back != ""){
             $query = $db->prepare("UPDATE public.notecard SET descriptionfront=:front, descriptionback=:back
-            WHERE notcardid=:notecardid;");
+            WHERE notecardid=:notecardid;");
             $query->bindValue(':notecardid', $notecardid, PDO::PARAM_INT);
             $query->bindValue(':front', $front, PDO::PARAM_STR);
             $query->bindValue(':back', $back, PDO::PARAM_STR);
             $query->execute();
-            // $location = "./notecards.php?stackid=$id";
-            // header("Location: $location");
-            // die();
+            $location = "./notecards.php?stackid=$id";
+            header("Location: $location");
+            die();
         }
     }
     
