@@ -12,6 +12,10 @@ body {
 h1 {
     font-size: 2rem;
 }
+a, :visited {
+    text-decoration: none;
+    color: black;
+}
 .title {
     display: flex;
     justify-content: center;
