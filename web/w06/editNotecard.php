@@ -5,22 +5,22 @@
     require "./dbConnect.php";
     $db = get_db();
 
-    if ($front != "") {
-        foreach ($db->query("SELECT descriptionfront, descriptionback FROM public.notecard 
-        WHERE descriptionfront='$front';") as $row)
-        {
-            session_start();
-            $frontTemp = $row['descriptionfront'];
-            $backTemp = $row['descriptionback'];
+    // if ($front != "") {
+    //     foreach ($db->query("SELECT descriptionfront, descriptionback FROM public.notecard 
+    //     WHERE descriptionfront='$front';") as $row)
+    //     {
+    //         session_start();
+    //         $frontTemp = $row['descriptionfront'];
+    //         $backTemp = $row['descriptionback'];
             
-        }
-            session_start();
-            $_SESSION['front'] = $frontTemp;
-            $_SESSION['back'] = $backTemp;
+    //     }
+    //         session_start();
+    //         $_SESSION['front'] = $frontTemp;
+    //         $_SESSION['back'] = $backTemp;
         
-        $query->bindValue(':stackid', $id, PDO::PARAM_INT);
-        $back = $query->execute();
-    }
+    //     $query->bindValue(':stackid', $id, PDO::PARAM_INT);
+    //     $back = $query->execute();
+    // }
 
     // if(isset($_POST['submit'])) {
     //     $front = $_POST['front'];
@@ -61,11 +61,11 @@
                 <div class="input-section">
                     <input type="hidden" name="stackid" value="<?php echo $stackid ?>"/>
                     <label for="front">Front</label>
-                    <input class="input" type="text" name="front" value="<?php echo $_SESSION['front'] ?>"/>
+                    <input class="input" type="text" name="front" value="<?php echo $front ?>"/>
                 </div>
                 <div class="input-section">
                     <label for="back">Back</label>
-                    <input class="input" type="text" name="back" value="<?php echo $_SESSION['back'] ?>"/>
+                    <input class="input" type="text" name="back"/>
                 </div>
                 <div class="button-section">
                     <input class="add-button" type="submit" name="submit" id="submit" value="Submit"/>
