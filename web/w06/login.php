@@ -59,6 +59,7 @@ if(isset($_POST['register'])){
                 <input class="input" type="text" id="password" name="password"/>
             </div>
             <div class="button-section">
+                <input class="hidden" role="none" type="submit" value="Login" name="login" id="login"/>
                 <input class="login-button" type="submit" value="Register" name="register" id="register"/>
                 <input class="login-button" type="submit" value="Login" name="login" id="login"/>
             </div>
