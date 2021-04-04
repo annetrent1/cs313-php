@@ -25,8 +25,8 @@ $stackid = $_GET['stackid'];
         {
             echo '<div class="notecard-container">';
             echo '<div class="notecard">';
-            echo '<p class="front face"> ' . $row['descriptionfront'] . '</p>';
-            echo '<p class="back face"> ' . $row['descriptionback'] . '</p>';
+            echo '<div class="front face"> ' . $row['descriptionfront'] . '</div>';
+            echo '<div class="back face"> ' . $row['descriptionback'] . '</div>';
             echo '</div>';
             echo '</div>';
         }
