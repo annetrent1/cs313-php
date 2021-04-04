@@ -3,8 +3,8 @@ require "./dbConnect.php";
 $db = get_db();
 
 if(isset($_POST['login'])){
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $email = htmlspecialchars($_POST['email']);
+    $password = htmlspecialchars($_POST['password']);
     foreach ($db->query("SELECT userid FROM public.user WHERE email='$email' AND password='$password';") as $row)
     {
         $userid = $row['userid'];
