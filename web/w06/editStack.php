@@ -2,8 +2,7 @@
    require "./dbConnect.php";
    $db = get_db();
    $stackid = $_GET['stackid'];
-   $name = "DNA";
-//    $_GET['name'];
+   $name = $_GET['name'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,7 +14,7 @@
     <form method="post" action="">
             <div class="item">
                 <label for="edit">Edit</label>
-                <input class="input" type="text" id="edit" name="edit" value="<?php echo $name ?>"/>
+                <input class="input" type="text" id="edit" name="edit" value="<?php echo $name; ?>"/>
                 <input class="add-button" type="submit" value="edit" />
             </div>
         </form>
