@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./notecard.css">
 </head>
 <body>
-    <?php echo $stackid; ?>
+    <div class="logout-button"><a href='./logout.php'>Logout</a></div>
 
 </body>
 </html>
