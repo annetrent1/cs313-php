@@ -18,9 +18,10 @@
         //     $location = "./notecards.php?stackid=$id";
         //     header("Location: $location");
         //     die();
-    } if (isset($_POST['cancel'])) {
-        header('Location: ./login.php');
-    }
+    } 
+    // if (isset($_POST['cancel'])) {
+    //     header('Location: ./login.php');
+    // }
     
   
 ?>
