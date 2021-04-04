@@ -24,8 +24,9 @@
         {
             echo '<p class="item note-item">';
             echo '<a href="./notecards.php?stackid=' . $row['stackid'] . '">' .  $row['name'] . '</a>';
+            echo '<div>';
             echo '<a class="button-edit" href="./editStack.php?stackid=' . $row['stackid'] . '&name=' . $row['name'] . '"> Edit </a>';
-            echo '</p>';
+            echo '</div></p>';
         }
         ?>
         <form method="post" action="./insertStack.php">
