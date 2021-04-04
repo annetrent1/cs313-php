@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <a href='./logout.php'>Logout</a>
+    <div class="logout-button"><a href='./logout.php'>Logout</a></div>
 
     <div class="title">
         <h1>Stacks </h1>
