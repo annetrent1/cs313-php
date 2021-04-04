@@ -19,7 +19,7 @@
         //     header("Location: $location");
         //     die();
     } if (isset($_POST['cancel'])) {
-        header("Location: ./login.php");
+        header('Location: ./login.php');
     }
     
   
