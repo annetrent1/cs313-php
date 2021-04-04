@@ -33,7 +33,7 @@
             <div class="item">
                 <input type="hidden" name="stackid" value="<?php echo $stackid?>" />
                 <input class="input" type="text" id="edit" name="edit"/>
-                <input class="add-button" type="submit" value="submit" />
+                <input class="add-button" type="submit" value="submit" name="submit" id="submit" />
             </div>
         </form>
 </body>
